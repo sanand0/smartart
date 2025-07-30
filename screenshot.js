@@ -1,7 +1,10 @@
-const { chromium } = require("playwright");
-const sharp = require("sharp");
-const path = require("path");
-const fs = require("fs");
+import { chromium } from "playwright";
+import { default as sharp } from "sharp";
+import { default as path } from "path";
+import { default as fs } from "fs";
+import { fileURLToPath } from "url";
+
+const __dirname = path.dirname(fileURLToPath(import.meta.url));
 
 // Automatically discover all HTML files in docs/ directory
 function getHtmlFiles() {
