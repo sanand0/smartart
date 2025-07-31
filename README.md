@@ -18,7 +18,9 @@ Circular flow diagrams for cyclical processes
 
 ## Pyramid
 
-Hierarchical structures and organizational charts
+Hierarchical structures and organizational charts. **[Read Pyramid Docs &raquo;](pyramid.md)**
+
+[![Pyramid Example](https://raw.githubusercontent.com/sanand0/smartart/main/docs/pyramid-colorful.webp)](pyramid.md)
 
 ## Funnel
 

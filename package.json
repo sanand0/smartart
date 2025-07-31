@@ -18,10 +18,12 @@
     "README.md",
     "dist/",
     "column.css",
-    "column.md"
+    "column.md",
+    "pyramid.css",
+    "pyramid.md"
   ],
   "scripts": {
-    "build": "npx -y esbuild chevron.css --bundle --minify --outfile=dist/chevron.min.css && npx -y esbuild column.css --bundle --minify --outfile=dist/column.min.css",
+    "build": "npx -y esbuild chevron.css --bundle --minify --outfile=dist/chevron.min.css && npx -y esbuild column.css --bundle --minify --outfile=dist/column.min.css && npx -y esbuild pyramid.css --bundle --minify --outfile=dist/pyramid.min.css",
     "screenshot": "node screenshot.js",
     "dev": "echo 'Development server would serve index.html here'",
     "lint:oxlint": "npx -y oxlint --fix",
@@ -39,6 +41,7 @@
     "css",
     "chevron",
     "column",
+    "pyramid",
     "progress",
     "flowchart",
     "smart-art",

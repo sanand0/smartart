@@ -1,0 +1,88 @@
+/* Pyramid Smart Art CSS Library */
+/* CSS Variables - All customizable parameters */
+:root {
+  /* Dimensions */
+  --pyramid-width: 400px; /* Width of the pyramid base */
+  --pyramid-gap: 10px; /* Gap between pyramid levels */
+  --pyramid-heading-min-height: 60px; /* Minimum height of the heading trapezoid */
+
+  /* Colors */
+  --pyramid-bg-color: #e0e0e0; /* Header background color */
+
+  /* Spacing */
+  --pyramid-content-padding: 15px; /* Content box padding */
+  --pyramid-content-gap: 20px; /* Gap between heading and content */
+}
+
+/* Main pyramid list container */
+.smartart-pyramid {
+  list-style: none; /* Remove default list styling */
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Center the pyramid levels */
+  margin: 0 auto; /* Center the pyramid component */
+  padding: 0;
+}
+
+/* Each pyramid item */
+.smartart-pyramid > li {
+  display: flex;
+  align-items: stretch; /* Make heading and content the same height */
+  margin-bottom: var(--pyramid-gap);
+  width: 100%;
+  justify-content: center;
+}
+
+/* Pyramid heading (the trapezoid) */
+.smartart-pyramid > li > :first-child {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: var(--pyramid-heading-min-height);
+  background-color: var(--pyramid-bg-color);
+  color: black;
+  text-align: center;
+  padding: 0 1em;
+  flex-shrink: 0;
+}
+
+/* Content box */
+.smartart-pyramid > li > ul {
+  list-style: initial;
+  margin: 0;
+  padding: var(--pyramid-content-padding);
+  padding-left: calc(var(--pyramid-content-padding) + 10px);
+  flex-grow: 1;
+  max-width: 400px; /* Limit content width */
+  margin-left: var(--pyramid-content-gap);
+}
+
+/* --- Pyramid shape generation --- */
+/* This uses a simple approach of setting widths for each level. */
+/* A pyramid is built from top to bottom (smallest to largest). */
+
+.smartart-pyramid > li:nth-child(1) > :first-child {
+  width: calc(var(--pyramid-width) * 0.4);
+  clip-path: polygon(25% 0%, 75% 0%, 100% 100%, 0% 100%);
+}
+
+.smartart-pyramid > li:nth-child(2) > :first-child {
+  width: calc(var(--pyramid-width) * 0.6);
+  clip-path: polygon(15% 0%, 85% 0%, 100% 100%, 0% 100%);
+}
+
+.smartart-pyramid > li:nth-child(3) > :first-child {
+  width: calc(var(--pyramid-width) * 0.8);
+  clip-path: polygon(10% 0%, 90% 0%, 100% 100%, 0% 100%);
+}
+
+.smartart-pyramid > li:nth-child(4) > :first-child {
+  width: var(--pyramid-width);
+  clip-path: polygon(5% 0%, 95% 0%, 100% 100%, 0% 100%);
+}
+
+/* Handle single item as a triangle */
+.smartart-pyramid > li:only-child > :first-child {
+    width: var(--pyramid-width);
+    clip-path: polygon(50% 0%, 100% 100%, 0% 100%);
+}
