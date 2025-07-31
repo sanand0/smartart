@@ -1,0 +1,63 @@
+/* Column Smart Art CSS Library */
+/* CSS Variables - All customizable parameters */
+:root {
+  --column-width: 200px; /* Width of each column */
+  --column-height: 60px; /* Height of column headers */
+  --column-gap: 15px; /* Gap between columns */
+  --column-bg-color: #e0e0e0; /* Header background color */
+  --column-text-indent: 10px; /* Text indent for headers */
+  --column-content-padding: 15px; /* Content box padding */
+}
+
+/* Main column list container */
+.smartart-column {
+  list-style: none;
+  display: flex;
+  align-items: stretch;
+  margin: 0 auto;
+
+  /* Each column item */
+  > li {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    flex: 0 0 auto;
+
+    /* Column header */
+    > :first-child {
+      width: var(--column-width);
+      height: var(--column-height);
+      background-color: var(--column-bg-color);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+      z-index: 2;
+      padding: 0 var(--column-text-indent);
+      margin-right: var(--column-gap);
+    }
+
+    /* Content boxes */
+    > ul {
+      list-style: initial;
+      padding: var(--column-content-padding) var(--column-content-padding) var(--column-content-padding)
+        calc(var(--column-content-padding) + var(--column-text-indent));
+      flex: 1;
+      position: relative;
+      z-index: 1;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      width: var(--column-width);
+      margin-right: var(--column-gap);
+    }
+
+    /* Last column removes right margin */
+    &:last-child {
+      > :first-child,
+      > ul {
+        margin-right: 0;
+      }
+    }
+  }
+}
