@@ -133,15 +133,15 @@ The library automatically handles text wrapping:
 
 Customize the appearance using CSS custom properties:
 
-| Variable                    | Default   | Description                  |
-| --------------------------- | --------- | ---------------------------- |
-| `--chevron-width`           | `200px`   | Width of each chevron header |
-| `--chevron-height`          | `60px`    | Height of chevron headers    |
-| `--chevron-tip-width`       | `30px`    | Width of pointed tips        |
-| `--chevron-gap`             | `20px`    | Gap between sections         |
-| `--chevron-bg-color`        | `#e0e0e0` | Header background color      |
-| `--chevron-text-indent`     | `10px`    | Text indent for headers      |
-| `--chevron-content-padding` | `15px`    | Content box padding          |
+| Variable                    | Default   | Description                           |
+| --------------------------- | --------- | ------------------------------------- |
+| `--chevron-width`           | `200px`   | Width of each chevron header          |
+| `--chevron-height`          | `60px`    | Height of chevron headers             |
+| `--chevron-tip-width`       | `30px`    | Width of pointed tips                 |
+| `--chevron-gap`             | `20px`    | Gap between sections                  |
+| `--chevron-bg-color`        | `#e0e0e0` | Header background color               |
+| `--chevron-text-indent`     | `10px`    | Text indent for headers & content box |
+| `--chevron-content-padding` | `15px`    | Content box padding                   |
 
 ### Default Theme
 

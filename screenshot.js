@@ -25,10 +25,14 @@ const examples = getHtmlFiles();
   await page.setViewportSize({ width: 800, height: 600 });
 
   for (const example of examples) {
+    const source = path.resolve(__dirname, "docs", `${example}.html`);
+    const target = `docs/${example}.webp`;
+    if (fs.existsSync(target) && fs.statSync(source).mtime <= fs.statSync(target).mtime) continue;
+
     console.log(`Generating screenshot for ${example}...`);
 
     // Navigate to the HTML file
-    await page.goto(`file://${path.resolve(__dirname, "docs", `${example}.html`)}`);
+    await page.goto(`file://${source}`);
 
     // Wait for the page to load
     await page.waitForLoadState("networkidle");
@@ -52,7 +56,7 @@ const examples = getHtmlFiles();
         quality: 100, // Maximum quality for lossless
         effort: 6, // Maximum compression effort
       })
-      .toFile(`docs/${example}.webp`);
+      .toFile(target);
 
     console.log(`✓ Generated docs/${example}.webp (lossless)`);
   }
