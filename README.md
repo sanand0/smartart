@@ -12,6 +12,12 @@ Process flows showing sequential elements. **[Read Chevron Docs &raquo;](chevron
 
 [![Chevron Example](https://raw.githubusercontent.com/sanand0/smartart/main/docs/chevron-colorful.webp)](chevron.md)
 
+## Column
+
+Vertical blocks for categorical data. **[Read Column Docs &raquo;](column.md)**
+
+[![Column Example](https://raw.githubusercontent.com/sanand0/smartart/main/docs/column-colorful.webp)](column.md)
+
 ## Cycle
 
 Circular flow diagrams for cyclical processes

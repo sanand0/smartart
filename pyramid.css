@@ -3,7 +3,7 @@
 :root {
   /* Dimensions */
   --pyramid-width: 400px; /* Width of the pyramid base */
-  --pyramid-gap: 10px; /* Gap between pyramid levels */
+  --pyramid-gap: 0px; /* Gap between pyramid levels */
   --pyramid-heading-min-height: 60px; /* Minimum height of the heading trapezoid */
 
   /* Colors */
@@ -22,15 +22,16 @@
   align-items: center; /* Center the pyramid levels */
   margin: 0 auto; /* Center the pyramid component */
   padding: 0;
+  gap: var(--pyramid-gap);
 }
 
 /* Each pyramid item */
 .smartart-pyramid > li {
-  display: flex;
+  display: grid;
+  grid-template-columns: var(--pyramid-width) auto;
   align-items: stretch; /* Make heading and content the same height */
-  margin-bottom: var(--pyramid-gap);
-  width: 100%;
-  justify-content: center;
+  width: calc(var(--pyramid-width) + 400px); /* total width */
+  gap: var(--pyramid-content-gap);
 }
 
 /* Pyramid heading (the trapezoid) */
@@ -42,8 +43,9 @@
   background-color: var(--pyramid-bg-color);
   color: black;
   text-align: center;
-  padding: 0 1em;
-  flex-shrink: 0;
+  padding: 1em;
+  width: 100%; /* take full width of grid cell */
+  margin: 0 auto; /* center the trapezoid in the cell */
 }
 
 /* Content box */
@@ -51,14 +53,12 @@
   list-style: initial;
   margin: 0;
   padding: var(--pyramid-content-padding);
-  padding-left: calc(var(--pyramid-content-padding) + 10px);
-  flex-grow: 1;
-  max-width: 400px; /* Limit content width */
-  margin-left: var(--pyramid-content-gap);
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* vertically center content */
 }
 
 /* --- Pyramid shape generation --- */
-/* This uses a simple approach of setting widths for each level. */
 /* A pyramid is built from top to bottom (smallest to largest). */
 
 .smartart-pyramid > li:nth-child(1) > :first-child {
@@ -79,6 +79,11 @@
 .smartart-pyramid > li:nth-child(4) > :first-child {
   width: var(--pyramid-width);
   clip-path: polygon(5% 0%, 95% 0%, 100% 100%, 0% 100%);
+}
+
+.smartart-pyramid > li:nth-child(5) > :first-child {
+  width: calc(var(--pyramid-width) * 1.2);
+  clip-path: polygon(2.5% 0%, 97.5% 0%, 100% 100%, 0% 100%);
 }
 
 /* Handle single item as a triangle */

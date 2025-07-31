@@ -154,3 +154,19 @@ The standard appearance with clean, professional styling:
 [![Large Size](https://raw.githubusercontent.com/sanand0/smartart/main/docs/pyramid-large.webp)](docs/pyramid-large.html ":include height=400px")
 
 [See the Large size example](docs/pyramid-large.html ":ignore")
+
+### Five Levels
+
+The library supports up to five levels out of the box.
+
+[![Five Levels](https://raw.githubusercontent.com/sanand0/smartart/main/docs/pyramid-five-levels.webp)](docs/pyramid-five-levels.html ":include height=400px")
+
+[See the Five levels example](docs/pyramid-five-levels.html ":ignore")
+
+### Heading Wrapping
+
+The library automatically handles text wrapping in headings.
+
+[![Heading Wrapping](https://raw.githubusercontent.com/sanand0/smartart/main/docs/pyramid-heading-wrap.webp)](docs/pyramid-heading-wrap.html ":include height=250px")
+
+[See the Heading wrapping example](docs/pyramid-heading-wrap.html ":ignore")
