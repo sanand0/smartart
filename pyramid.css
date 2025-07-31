@@ -3,6 +3,7 @@
 :root {
   /* Dimensions */
   --pyramid-width: 400px; /* Width of the pyramid base */
+  --pyramid-top-width: 100px; /* Width of the pyramid top */
   --pyramid-gap: 0px; /* Gap between pyramid levels */
   --pyramid-heading-min-height: 60px; /* Minimum height of the heading trapezoid */
 
@@ -23,7 +24,20 @@
   margin: 0 auto; /* Center the pyramid component */
   padding: 0;
   gap: var(--pyramid-gap);
+  --pyramid-levels: 5; /* Default number of levels, can be overridden by data-levels attribute */
 }
+
+/* Set number of levels from data-attribute */
+.smartart-pyramid[data-levels="1"] { --pyramid-levels: 1; }
+.smartart-pyramid[data-levels="2"] { --pyramid-levels: 2; }
+.smartart-pyramid[data-levels="3"] { --pyramid-levels: 3; }
+.smartart-pyramid[data-levels="4"] { --pyramid-levels: 4; }
+.smartart-pyramid[data-levels="5"] { --pyramid-levels: 5; }
+.smartart-pyramid[data-levels="6"] { --pyramid-levels: 6; }
+.smartart-pyramid[data-levels="7"] { --pyramid-levels: 7; }
+.smartart-pyramid[data-levels="8"] { --pyramid-levels: 8; }
+.smartart-pyramid[data-levels="9"] { --pyramid-levels: 9; }
+.smartart-pyramid[data-levels="10"] { --pyramid-levels: 10; }
 
 /* Each pyramid item */
 .smartart-pyramid > li {
@@ -33,6 +47,18 @@
   width: calc(var(--pyramid-width) + 400px); /* total width */
   gap: var(--pyramid-content-gap);
 }
+
+/* Set level for each item */
+.smartart-pyramid > li:nth-child(1) { --level: 1; }
+.smartart-pyramid > li:nth-child(2) { --level: 2; }
+.smartart-pyramid > li:nth-child(3) { --level: 3; }
+.smartart-pyramid > li:nth-child(4) { --level: 4; }
+.smartart-pyramid > li:nth-child(5) { --level: 5; }
+.smartart-pyramid > li:nth-child(6) { --level: 6; }
+.smartart-pyramid > li:nth-child(7) { --level: 7; }
+.smartart-pyramid > li:nth-child(8) { --level: 8; }
+.smartart-pyramid > li:nth-child(9) { --level: 9; }
+.smartart-pyramid > li:nth-child(10) { --level: 10; }
 
 /* Pyramid heading (the trapezoid) */
 .smartart-pyramid > li > :first-child {
@@ -44,9 +70,66 @@
   color: black;
   text-align: center;
   padding: 1em;
-  width: 100%; /* take full width of grid cell */
   margin: 0 auto; /* center the trapezoid in the cell */
+
+  --width-increment: calc((var(--pyramid-width) - var(--pyramid-top-width)) / (var(--pyramid-levels) - 1));
+  width: calc(var(--pyramid-top-width) + (var(--level) - 1) * var(--width-increment));
+
+  --inset: calc(var(--width-increment) / 2);
+  clip-path: polygon(
+    var(--inset) 0,
+    calc(100% - var(--inset)) 0,
+    100% 100%,
+    0 100%
+  );
 }
+
+/* First level is a trapezoid starting from pyramid-top-width */
+.smartart-pyramid > li:first-child > :first-child {
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%); /* a rectangle, but it's the top */
+}
+
+/* A better way for the first level clip-path */
+.smartart-pyramid > li:first-child > :first-child {
+    --inset: 0px;
+    clip-path: polygon(
+        var(--inset) 0,
+        calc(100% - var(--inset)) 0,
+        calc(100% - var(--width-increment)/2) 100%,
+        calc(var(--width-increment)/2) 100%
+    );
+}
+
+.smartart-pyramid > li > :first-child {
+    --width-increment: calc((var(--pyramid-width) - var(--pyramid-top-width)) / (var(--pyramid-levels) - 1));
+    width: calc(var(--pyramid-top-width) + (var(--level) - 1) * var(--width-increment));
+
+    --inset-top: calc(var(--width-increment) * (var(--level) - 1) / 2);
+    --inset-bottom: calc(var(--width-increment) * var(--level) / 2);
+
+    /* this is getting complicated. Let's simplify */
+    --top-inset-percent: calc( ( ( (var(--pyramid-width) - var(--pyramid-top-width)) / (var(--pyramid-levels) - 1) ) / (var(--pyramid-top-width) + (var(--level) - 1) * ((var(--pyramid-width) - var(--pyramid-top-width)) / (var(--pyramid-levels) - 1))) ) / 2 * 100%);
+
+    clip-path: polygon(
+        var(--top-inset-percent)% 0,
+        calc(100% - var(--top-inset-percent)%) 0,
+        100% 100%,
+        0% 100%
+    );
+}
+
+/* Final simplified approach */
+.smartart-pyramid > li > :first-child {
+    --width-increment: calc((var(--pyramid-width) - var(--pyramid-top-width)) / (var(--pyramid-levels) - 1));
+    width: calc(var(--pyramid-top-width) + (var(--level) - 1) * var(--width-increment));
+    --inset: calc(var(--width-increment) / 2);
+    clip-path: polygon(var(--inset) 0, calc(100% - var(--inset)) 0, 100% 100%, 0 100%);
+}
+
+.smartart-pyramid > li:first-child > :first-child {
+    clip-path: polygon(0 0, 100% 0, calc(100% - var(--width-increment)/2) 100%, calc(var(--width-increment)/2) 100%);
+}
+
 
 /* Content box */
 .smartart-pyramid > li > ul {
@@ -56,34 +139,6 @@
   display: flex;
   flex-direction: column;
   justify-content: center; /* vertically center content */
-}
-
-/* --- Pyramid shape generation --- */
-/* A pyramid is built from top to bottom (smallest to largest). */
-
-.smartart-pyramid > li:nth-child(1) > :first-child {
-  width: calc(var(--pyramid-width) * 0.4);
-  clip-path: polygon(25% 0%, 75% 0%, 100% 100%, 0% 100%);
-}
-
-.smartart-pyramid > li:nth-child(2) > :first-child {
-  width: calc(var(--pyramid-width) * 0.6);
-  clip-path: polygon(15% 0%, 85% 0%, 100% 100%, 0% 100%);
-}
-
-.smartart-pyramid > li:nth-child(3) > :first-child {
-  width: calc(var(--pyramid-width) * 0.8);
-  clip-path: polygon(10% 0%, 90% 0%, 100% 100%, 0% 100%);
-}
-
-.smartart-pyramid > li:nth-child(4) > :first-child {
-  width: var(--pyramid-width);
-  clip-path: polygon(5% 0%, 95% 0%, 100% 100%, 0% 100%);
-}
-
-.smartart-pyramid > li:nth-child(5) > :first-child {
-  width: calc(var(--pyramid-width) * 1.2);
-  clip-path: polygon(2.5% 0%, 97.5% 0%, 100% 100%, 0% 100%);
 }
 
 /* Handle single item as a triangle */
