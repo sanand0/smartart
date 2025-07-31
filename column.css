@@ -10,7 +10,7 @@
   --column-bg-color: #e0e0e0; /* Header background color */
 
   /* Spacing */
-  --column-text-indent: 10px; /* Text indent for headers */
+  --column-text-indent: 10px; /* Text indent for content box */
   --column-content-padding: 15px; /* Content box padding */
 }
 

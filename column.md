@@ -83,26 +83,6 @@ For simple step indicators without detailed content, add any element inside each
 
 [See the Minimal example](docs/column-minimal.html ":ignore")
 
-### Single Column
-
-For standalone elements:
-
-```html
-<ul class="smartart-column">
-  <li>
-    <h2>Important Notice</h2>
-    <ul>
-      <li>Read all instructions</li>
-      <li>Complete forms</li>
-    </ul>
-  </li>
-</ul>
-```
-
-[![Single Column Example](https://raw.githubusercontent.com/sanand0/smartart/main/docs/column-single.webp)](docs/column-single.html ":include height=200px")
-
-[See the Single column example](docs/column-single.html ":ignore")
-
 ### Long Text Wrapping
 
 The library automatically handles text wrapping:
@@ -139,7 +119,7 @@ Customize the appearance using CSS custom properties:
 | `--column-height`          | `60px`    | Height of column headers    |
 | `--column-gap`             | `15px`    | Gap between sections        |
 | `--column-bg-color`        | `#e0e0e0` | Header background color     |
-| `--column-text-indent`     | `10px`    | Text indent for headers     |
+| `--column-text-indent`     | `10px`    | Text indent for content box |
 | `--column-content-padding` | `15px`    | Content box padding         |
 
 ### Default Theme
