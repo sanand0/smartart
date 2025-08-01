@@ -1,0 +1,153 @@
+/* SmartArt Themes */
+
+/* Office Theme */
+.smartart-theme-office li:nth-child(1) > :first-child { background-color: #4472c4; color: white; }
+.smartart-theme-office li:nth-child(1) > ul { background-color: #ddebf7; color: black; }
+.smartart-theme-office li:nth-child(2) > :first-child { background-color: #ed7d31; color: white; }
+.smartart-theme-office li:nth-child(2) > ul { background-color: #fce4d6; color: black; }
+.smartart-theme-office li:nth-child(3) > :first-child { background-color: #a5a5a5; color: white; }
+.smartart-theme-office li:nth-child(3) > ul { background-color: #ededed; color: black; }
+.smartart-theme-office li:nth-child(4) > :first-child { background-color: #ffc000; color: white; }
+.smartart-theme-office li:nth-child(4) > ul { background-color: #fff2cc; color: black; }
+.smartart-theme-office li:nth-child(5) > :first-child { background-color: #5b9bd5; color: white; }
+.smartart-theme-office li:nth-child(5) > ul { background-color: #deebf7; color: black; }
+.smartart-theme-office li:nth-child(6) > :first-child { background-color: #70ad47; color: white; }
+.smartart-theme-office li:nth-child(6) > ul { background-color: #e2f0d9; color: black; }
+
+/* Grayscale Theme */
+.smartart-theme-grayscale li:nth-child(1) > :first-child { background-color: #333333; color: white; }
+.smartart-theme-grayscale li:nth-child(1) > ul { background-color: #f0f0f0; color: black; }
+.smartart-theme-grayscale li:nth-child(2) > :first-child { background-color: #555555; color: white; }
+.smartart-theme-grayscale li:nth-child(2) > ul { background-color: #e0e0e0; color: black; }
+.smartart-theme-grayscale li:nth-child(3) > :first-child { background-color: #777777; color: white; }
+.smartart-theme-grayscale li:nth-child(3) > ul { background-color: #d0d0d0; color: black; }
+.smartart-theme-grayscale li:nth-child(4) > :first-child { background-color: #999999; color: white; }
+.smartart-theme-grayscale li:nth-child(4) > ul { background-color: #c0c0c0; color: black; }
+.smartart-theme-grayscale li:nth-child(5) > :first-child { background-color: #bbbbbb; color: black; }
+.smartart-theme-grayscale li:nth-child(5) > ul { background-color: #b0b0b0; color: black; }
+.smartart-theme-grayscale li:nth-child(6) > :first-child { background-color: #dddddd; color: black; }
+.smartart-theme-grayscale li:nth-child(6) > ul { background-color: #a0a0a0; color: black; }
+
+/* Blue Warm Theme */
+.smartart-theme-blue-warm li:nth-child(1) > :first-child { background-color: #0b5394; color: white; }
+.smartart-theme-blue-warm li:nth-child(1) > ul { background-color: #cfe2f3; color: black; }
+.smartart-theme-blue-warm li:nth-child(2) > :first-child { background-color: #3d85c6; color: white; }
+.smartart-theme-blue-warm li:nth-child(2) > ul { background-color: #d9ead3; color: black; }
+.smartart-theme-blue-warm li:nth-child(3) > :first-child { background-color: #6fa8dc; color: white; }
+.smartart-theme-blue-warm li:nth-child(3) > ul { background-color: #d0e0e3; color: black; }
+.smartart-theme-blue-warm li:nth-child(4) > :first-child { background-color: #9fc5e8; color: black; }
+.smartart-theme-blue-warm li:nth-child(4) > ul { background-color: #c9daf8; color: black; }
+.smartart-theme-blue-warm li:nth-child(5) > :first-child { background-color: #cfe2f3; color: black; }
+.smartart-theme-blue-warm li:nth-child(5) > ul { background-color: #b4a7d6; color: black; }
+.smartart-theme-blue-warm li:nth-child(6) > :first-child { background-color: #d9ead3; color: black; }
+.smartart-theme-blue-warm li:nth-child(6) > ul { background-color: #a4c2f4; color: black; }
+
+/* Blue II Theme */
+.smartart-theme-blue-ii li:nth-child(1) > :first-child { background-color: #004c99; color: white; }
+.smartart-theme-blue-ii li:nth-child(1) > ul { background-color: #cce5ff; color: black; }
+.smartart-theme-blue-ii li:nth-child(2) > :first-child { background-color: #0066cc; color: white; }
+.smartart-theme-blue-ii li:nth-child(2) > ul { background-color: #99ccff; color: black; }
+.smartart-theme-blue-ii li:nth-child(3) > :first-child { background-color: #3399ff; color: white; }
+.smartart-theme-blue-ii li:nth-child(3) > ul { background-color: #66b2ff; color: black; }
+.smartart-theme-blue-ii li:nth-child(4) > :first-child { background-color: #66b2ff; color: white; }
+.smartart-theme-blue-ii li:nth-child(4) > ul { background-color: #3399ff; color: black; }
+.smartart-theme-blue-ii li:nth-child(5) > :first-child { background-color: #99ccff; color: black; }
+.smartart-theme-blue-ii li:nth-child(5) > ul { background-color: #0066cc; color: black; }
+.smartart-theme-blue-ii li:nth-child(6) > :first-child { background-color: #cce5ff; color: black; }
+.smartart-theme-blue-ii li:nth-child(6) > ul { background-color: #004c99; color: black; }
+
+/* Tableau Theme */
+.smartart-theme-tableau li:nth-child(1) > :first-child { background-color: #4e79a7; color: white; }
+.smartart-theme-tableau li:nth-child(1) > ul { background-color: #d1d9e3; color: black; }
+.smartart-theme-tableau li:nth-child(2) > :first-child { background-color: #f28e2b; color: white; }
+.smartart-theme-tableau li:nth-child(2) > ul { background-color: #fadccc; color: black; }
+.smartart-theme-tableau li:nth-child(3) > :first-child { background-color: #e15759; color: white; }
+.smartart-theme-tableau li:nth-child(3) > ul { background-color: #f6d4d5; color: black; }
+.smartart-theme-tableau li:nth-child(4) > :first-child { background-color: #76b7b2; color: white; }
+.smartart-theme-tableau li:nth-child(4) > ul { background-color: #deeceb; color: black; }
+.smartart-theme-tableau li:nth-child(5) > :first-child { background-color: #59a14f; color: white; }
+.smartart-theme-tableau li:nth-child(5) > ul { background-color: #d4e5d2; color: black; }
+.smartart-theme-tableau li:nth-child(6) > :first-child { background-color: #edc948; color: white; }
+.smartart-theme-tableau li:nth-child(6) > ul { background-color: #f9f0d1; color: black; }
+
+/* D3 Theme */
+.smartart-theme-d3 li:nth-child(1) > :first-child { background-color: #1f77b4; color: white; }
+.smartart-theme-d3 li:nth-child(1) > ul { background-color: #c7d9e8; color: black; }
+.smartart-theme-d3 li:nth-child(2) > :first-child { background-color: #ff7f0e; color: white; }
+.smartart-theme-d3 li:nth-child(2) > ul { background-color: #ffe6cd; color: black; }
+.smartart-theme-d3 li:nth-child(3) > :first-child { background-color: #2ca02c; color: white; }
+.smartart-theme-d3 li:nth-child(3) > ul { background-color: #cae5ca; color: black; }
+.smartart-theme-d3 li:nth-child(4) > :first-child { background-color: #d62728; color: white; }
+.smartart-theme-d3 li:nth-child(4) > ul { background-color: #f4cacb; color: black; }
+.smartart-theme-d3 li:nth-child(5) > :first-child { background-color: #9467bd; color: white; }
+.smartart-theme-d3 li:nth-child(5) > ul { background-color: #e3d8ed; color: black; }
+.smartart-theme-d3 li:nth-child(6) > :first-child { background-color: #8c564b; color: white; }
+.smartart-theme-d3 li:nth-child(6) > ul { background-color: #e1d3d0; color: black; }
+
+/* Colorblind Safe Theme */
+.smartart-theme-colorblind-safe li:nth-child(1) > :first-child { background-color: #0173b2; color: white; }
+.smartart-theme-colorblind-safe li:nth-child(1) > ul { background-color: #cce8f4; color: black; }
+.smartart-theme-colorblind-safe li:nth-child(2) > :first-child { background-color: #de8f05; color: white; }
+.smartart-theme-colorblind-safe li:nth-child(2) > ul { background-color: #f9eacb; color: black; }
+.smartart-theme-colorblind-safe li:nth-child(3) > :first-child { background-color: #029e73; color: white; }
+.smartart-theme-colorblind-safe li:nth-child(3) > ul { background-color: #ccf0e8; color: black; }
+.smartart-theme-colorblind-safe li:nth-child(4) > :first-child { background-color: #d55e00; color: white; }
+.smartart-theme-colorblind-safe li:nth-child(4) > ul { background-color: #f5d6c9; color: black; }
+.smartart-theme-colorblind-safe li:nth-child(5) > :first-child { background-color: #cc78bc; color: white; }
+.smartart-theme-colorblind-safe li:nth-child(5) > ul { background-color: #f2e0ed; color: black; }
+.smartart-theme-colorblind-safe li:nth-child(6) > :first-child { background-color: #ca9161; color: white; }
+.smartart-theme-colorblind-safe li:nth-child(6) > ul { background-color: #f1e4d7; color: black; }
+
+/* Viridis Theme */
+.smartart-theme-viridis li:nth-child(1) > :first-child { background-color: #440154; color: white; }
+.smartart-theme-viridis li:nth-child(1) > ul { background-color: #d0cce3; color: black; }
+.smartart-theme-viridis li:nth-child(2) > :first-child { background-color: #414487; color: white; }
+.smartart-theme-viridis li:nth-child(2) > ul { background-color: #d0d1e0; color: black; }
+.smartart-theme-viridis li:nth-child(3) > :first-child { background-color: #2a788e; color: white; }
+.smartart-theme-viridis li:nth-child(3) > ul { background-color: #cae0e3; color: black; }
+.smartart-theme-viridis li:nth-child(4) > :first-child { background-color: #22a884; color: white; }
+.smartart-theme-viridis li:nth-child(4) > ul { background-color: #c9e8e0; color: black; }
+.smartart-theme-viridis li:nth-child(5) > :first-child { background-color: #7ad151; color: white; }
+.smartart-theme-viridis li:nth-child(5) > ul { background-color: #e0f4d3; color: black; }
+.smartart-theme-viridis li:nth-child(6) > :first-child { background-color: #fde725; color: black; }
+.smartart-theme-viridis li:nth-child(6) > ul { background-color: #fef9ca; color: black; }
+
+/* Monokai Theme */
+.smartart-theme-monokai li:nth-child(n) > :first-child { color: #f8f8f2; }
+.smartart-theme-monokai li:nth-child(n) > ul { background-color: #272822; color: #f8f8f2; }
+.smartart-theme-monokai li:nth-child(1) > :first-child { background-color: #f92672; }
+.smartart-theme-monokai li:nth-child(2) > :first-child { background-color: #a6e22e; }
+.smartart-theme-monokai li:nth-child(3) > :first-child { background-color: #fd971f; }
+.smartart-theme-monokai li:nth-child(4) > :first-child { background-color: #66d9ef; }
+.smartart-theme-monokai li:nth-child(5) > :first-child { background-color: #ae81ff; }
+.smartart-theme-monokai li:nth-child(6) > :first-child { background-color: #cc6633; }
+
+/* Solarized Light Theme */
+.smartart-theme-solarized-light li:nth-child(n) > :first-child { color: #657b83; }
+.smartart-theme-solarized-light li:nth-child(n) > ul { background-color: #fdf6e3; color: #657b83; }
+.smartart-theme-solarized-light li:nth-child(1) > :first-child { background-color: #b58900; }
+.smartart-theme-solarized-light li:nth-child(2) > :first-child { background-color: #cb4b16; }
+.smartart-theme-solarized-light li:nth-child(3) > :first-child { background-color: #dc322f; }
+.smartart-theme-solarized-light li:nth-child(4) > :first-child { background-color: #d33682; }
+.smartart-theme-solarized-light li:nth-child(5) > :first-child { background-color: #6c71c4; }
+.smartart-theme-solarized-light li:nth-child(6) > :first-child { background-color: #268bd2; }
+
+/* Solarized Dark Theme */
+.smartart-theme-solarized-dark li:nth-child(n) > :first-child { color: #839496; }
+.smartart-theme-solarized-dark li:nth-child(n) > ul { background-color: #002b36; color: #839496; }
+.smartart-theme-solarized-dark li:nth-child(1) > :first-child { background-color: #b58900; }
+.smartart-theme-solarized-dark li:nth-child(2) > :first-child { background-color: #cb4b16; }
+.smartart-theme-solarized-dark li:nth-child(3) > :first-child { background-color: #dc322f; }
+.smartart-theme-solarized-dark li:nth-child(4) > :first-child { background-color: #d33682; }
+.smartart-theme-solarized-dark li:nth-child(5) > :first-child { background-color: #6c71c4; }
+.smartart-theme-solarized-dark li:nth-child(6) > :first-child { background-color: #268bd2; }
+
+/* Dracula Theme */
+.smartart-theme-dracula li:nth-child(n) > :first-child { color: #f8f8f2; }
+.smartart-theme-dracula li:nth-child(n) > ul { background-color: #282a36; color: #f8f8f2; }
+.smartart-theme-dracula li:nth-child(1) > :first-child { background-color: #ff79c6; }
+.smartart-theme-dracula li:nth-child(2) > :first-child { background-color: #50fa7b; }
+.smartart-theme-dracula li:nth-child(3) > :first-child { background-color: #f1fa8c; }
+.smartart-theme-dracula li:nth-child(4) > :first-child { background-color: #bd93f9; }
+.smartart-theme-dracula li:nth-child(5) > :first-child { background-color: #8be9fd; }
+.smartart-theme-dracula li:nth-child(6) > :first-child { background-color: #ffb86c; }
