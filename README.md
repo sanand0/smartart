@@ -12,6 +12,18 @@ Process flows showing sequential elements. **[Read Chevron Docs &raquo;](chevron
 
 [![Chevron Example](https://raw.githubusercontent.com/sanand0/smartart/main/docs/chevron-colorful.webp)](chevron.md)
 
+## Column
+
+Lists of items with headers. **[Read Column Docs &raquo;](column.md)**
+
+[![Column Example](https://raw.githubusercontent.com/sanand0/smartart/main/docs/column-colorful.webp)](column.md)
+
+## Rows
+
+Lists of items with headers, oriented horizontally. **[Read Rows Docs &raquo;](rows.md)**
+
+[![Rows Example](https://raw.githubusercontent.com/sanand0/smartart/main/docs/rows-colorful.webp)](rows.md)
+
 ## Cycle
 
 Circular flow diagrams for cyclical processes
