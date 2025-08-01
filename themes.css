@@ -317,3 +317,267 @@
 .smartart-theme-monokai.smartart-chevron > li:nth-child(6) > :first-child,
 .smartart-theme-monokai.smartart-column > li:nth-child(6) > :first-child,
 .smartart-theme-monokai.smartart-rows > li:nth-child(6) > :first-child { background-color: #e6db74; /* yellow */ }
+
+/*
+ * Forest Theme
+ */
+.smartart-theme-forest.smartart-chevron > li:nth-child(1) > :first-child,
+.smartart-theme-forest.smartart-column > li:nth-child(1) > :first-child,
+.smartart-theme-forest.smartart-rows > li:nth-child(1) > :first-child { background-color: #2f4f4f; color: white; }
+.smartart-theme-forest.smartart-chevron > li:nth-child(2) > :first-child,
+.smartart-theme-forest.smartart-column > li:nth-child(2) > :first-child,
+.smartart-theme-forest.smartart-rows > li:nth-child(2) > :first-child { background-color: #556b2f; color: white; }
+.smartart-theme-forest.smartart-chevron > li:nth-child(3) > :first-child,
+.smartart-theme-forest.smartart-column > li:nth-child(3) > :first-child,
+.smartart-theme-forest.smartart-rows > li:nth-child(3) > :first-child { background-color: #8b4513; color: white; }
+.smartart-theme-forest.smartart-chevron > li:nth-child(4) > :first-child,
+.smartart-theme-forest.smartart-column > li:nth-child(4) > :first-child,
+.smartart-theme-forest.smartart-rows > li:nth-child(4) > :first-child { background-color: #228b22; color: white; }
+.smartart-theme-forest.smartart-chevron > li:nth-child(5) > :first-child,
+.smartart-theme-forest.smartart-column > li:nth-child(5) > :first-child,
+.smartart-theme-forest.smartart-rows > li:nth-child(5) > :first-child { background-color: #add8e6; color: #333; }
+.smartart-theme-forest.smartart-chevron > li:nth-child(6) > :first-child,
+.smartart-theme-forest.smartart-column > li:nth-child(6) > :first-child,
+.smartart-theme-forest.smartart-rows > li:nth-child(6) > :first-child { background-color: #90ee90; color: #333; }
+
+/*
+ * Ocean Theme
+ */
+.smartart-theme-ocean.smartart-chevron > li:nth-child(1) > :first-child,
+.smartart-theme-ocean.smartart-column > li:nth-child(1) > :first-child,
+.smartart-theme-ocean.smartart-rows > li:nth-child(1) > :first-child { background-color: #000080; color: white; }
+.smartart-theme-ocean.smartart-chevron > li:nth-child(2) > :first-child,
+.smartart-theme-ocean.smartart-column > li:nth-child(2) > :first-child,
+.smartart-theme-ocean.smartart-rows > li:nth-child(2) > :first-child { background-color: #0000cd; color: white; }
+.smartart-theme-ocean.smartart-chevron > li:nth-child(3) > :first-child,
+.smartart-theme-ocean.smartart-column > li:nth-child(3) > :first-child,
+.smartart-theme-ocean.smartart-rows > li:nth-child(3) > :first-child { background-color: #4169e1; color: white; }
+.smartart-theme-ocean.smartart-chevron > li:nth-child(4) > :first-child,
+.smartart-theme-ocean.smartart-column > li:nth-child(4) > :first-child,
+.smartart-theme-ocean.smartart-rows > li:nth-child(4) > :first-child { background-color: #1e90ff; color: white; }
+.smartart-theme-ocean.smartart-chevron > li:nth-child(5) > :first-child,
+.smartart-theme-ocean.smartart-column > li:nth-child(5) > :first-child,
+.smartart-theme-ocean.smartart-rows > li:nth-child(5) > :first-child { background-color: #00bfff; color: white; }
+.smartart-theme-ocean.smartart-chevron > li:nth-child(6) > :first-child,
+.smartart-theme-ocean.smartart-column > li:nth-child(6) > :first-child,
+.smartart-theme-ocean.smartart-rows > li:nth-child(6) > :first-child { background-color: #87ceeb; color: #333; }
+
+/*
+ * Sunset Theme
+ */
+.smartart-theme-sunset.smartart-chevron > li:nth-child(1) > :first-child,
+.smartart-theme-sunset.smartart-column > li:nth-child(1) > :first-child,
+.smartart-theme-sunset.smartart-rows > li:nth-child(1) > :first-child { background-color: #ff4500; color: white; }
+.smartart-theme-sunset.smartart-chevron > li:nth-child(2) > :first-child,
+.smartart-theme-sunset.smartart-column > li:nth-child(2) > :first-child,
+.smartart-theme-sunset.smartart-rows > li:nth-child(2) > :first-child { background-color: #ff6347; color: white; }
+.smartart-theme-sunset.smartart-chevron > li:nth-child(3) > :first-child,
+.smartart-theme-sunset.smartart-column > li:nth-child(3) > :first-child,
+.smartart-theme-sunset.smartart-rows > li:nth-child(3) > :first-child { background-color: #ff7f50; color: white; }
+.smartart-theme-sunset.smartart-chevron > li:nth-child(4) > :first-child,
+.smartart-theme-sunset.smartart-column > li:nth-child(4) > :first-child,
+.smartart-theme-sunset.smartart-rows > li:nth-child(4) > :first-child { background-color: #ffa07a; color: #333; }
+.smartart-theme-sunset.smartart-chevron > li:nth-child(5) > :first-child,
+.smartart-theme-sunset.smartart-column > li:nth-child(5) > :first-child,
+.smartart-theme-sunset.smartart-rows > li:nth-child(5) > :first-child { background-color: #ffb6c1; color: #333; }
+.smartart-theme-sunset.smartart-chevron > li:nth-child(6) > :first-child,
+.smartart-theme-sunset.smartart-column > li:nth-child(6) > :first-child,
+.smartart-theme-sunset.smartart-rows > li:nth-child(6) > :first-child { background-color: #db7093; color: white; }
+
+/*
+ * Autumn Theme
+ */
+.smartart-theme-autumn.smartart-chevron > li:nth-child(1) > :first-child,
+.smartart-theme-autumn.smartart-column > li:nth-child(1) > :first-child,
+.smartart-theme-autumn.smartart-rows > li:nth-child(1) > :first-child { background-color: #800000; color: white; }
+.smartart-theme-autumn.smartart-chevron > li:nth-child(2) > :first-child,
+.smartart-theme-autumn.smartart-column > li:nth-child(2) > :first-child,
+.smartart-theme-autumn.smartart-rows > li:nth-child(2) > :first-child { background-color: #a52a2a; color: white; }
+.smartart-theme-autumn.smartart-chevron > li:nth-child(3) > :first-child,
+.smartart-theme-autumn.smartart-column > li:nth-child(3) > :first-child,
+.smartart-theme-autumn.smartart-rows > li:nth-child(3) > :first-child { background-color: #d2691e; color: white; }
+.smartart-theme-autumn.smartart-chevron > li:nth-child(4) > :first-child,
+.smartart-theme-autumn.smartart-column > li:nth-child(4) > :first-child,
+.smartart-theme-autumn.smartart-rows > li:nth-child(4) > :first-child { background-color: #ff8c00; color: white; }
+.smartart-theme-autumn.smartart-chevron > li:nth-child(5) > :first-child,
+.smartart-theme-autumn.smartart-column > li:nth-child(5) > :first-child,
+.smartart-theme-autumn.smartart-rows > li:nth-child(5) > :first-child { background-color: #ffd700; color: #333; }
+.smartart-theme-autumn.smartart-chevron > li:nth-child(6) > :first-child,
+.smartart-theme-autumn.smartart-column > li:nth-child(6) > :first-child,
+.smartart-theme-autumn.smartart-rows > li:nth-child(6) > :first-child { background-color: #eee8aa; color: #333; }
+
+/*
+ * Winter Theme
+ */
+.smartart-theme-winter.smartart-chevron > li:nth-child(1) > :first-child,
+.smartart-theme-winter.smartart-column > li:nth-child(1) > :first-child,
+.smartart-theme-winter.smartart-rows > li:nth-child(1) > :first-child { background-color: #f0f8ff; color: #333; }
+.smartart-theme-winter.smartart-chevron > li:nth-child(2) > :first-child,
+.smartart-theme-winter.smartart-column > li:nth-child(2) > :first-child,
+.smartart-theme-winter.smartart-rows > li:nth-child(2) > :first-child { background-color: #add8e6; color: #333; }
+.smartart-theme-winter.smartart-chevron > li:nth-child(3) > :first-child,
+.smartart-theme-winter.smartart-column > li:nth-child(3) > :first-child,
+.smartart-theme-winter.smartart-rows > li:nth-child(3) > :first-child { background-color: #87ceeb; color: #333; }
+.smartart-theme-winter.smartart-chevron > li:nth-child(4) > :first-child,
+.smartart-theme-winter.smartart-column > li:nth-child(4) > :first-child,
+.smartart-theme-winter.smartart-rows > li:nth-child(4) > :first-child { background-color: #4682b4; color: white; }
+.smartart-theme-winter.smartart-chevron > li:nth-child(5) > :first-child,
+.smartart-theme-winter.smartart-column > li:nth-child(5) > :first-child,
+.smartart-theme-winter.smartart-rows > li:nth-child(5) > :first-child { background-color: #708090; color: white; }
+.smartart-theme-winter.smartart-chevron > li:nth-child(6) > :first-child,
+.smartart-theme-winter.smartart-column > li:nth-child(6) > :first-child,
+.smartart-theme-winter.smartart-rows > li:nth-child(6) > :first-child { background-color: #dcdcdc; color: #333; }
+
+/*
+ * Spring Theme
+ */
+.smartart-theme-spring.smartart-chevron > li:nth-child(1) > :first-child,
+.smartart-theme-spring.smartart-column > li:nth-child(1) > :first-child,
+.smartart-theme-spring.smartart-rows > li:nth-child(1) > :first-child { background-color: #98fb98; color: #333; }
+.smartart-theme-spring.smartart-chevron > li:nth-child(2) > :first-child,
+.smartart-theme-spring.smartart-column > li:nth-child(2) > :first-child,
+.smartart-theme-spring.smartart-rows > li:nth-child(2) > :first-child { background-color: #ffb6c1; color: #333; }
+.smartart-theme-spring.smartart-chevron > li:nth-child(3) > :first-child,
+.smartart-theme-spring.smartart-column > li:nth-child(3) > :first-child,
+.smartart-theme-spring.smartart-rows > li:nth-child(3) > :first-child { background-color: #fafad2; color: #333; }
+.smartart-theme-spring.smartart-chevron > li:nth-child(4) > :first-child,
+.smartart-theme-spring.smartart-column > li:nth-child(4) > :first-child,
+.smartart-theme-spring.smartart-rows > li:nth-child(4) > :first-child { background-color: #add8e6; color: #333; }
+.smartart-theme-spring.smartart-chevron > li:nth-child(5) > :first-child,
+.smartart-theme-spring.smartart-column > li:nth-child(5) > :first-child,
+.smartart-theme-spring.smartart-rows > li:nth-child(5) > :first-child { background-color: #da70d6; color: white; }
+.smartart-theme-spring.smartart-chevron > li:nth-child(6) > :first-child,
+.smartart-theme-spring.smartart-column > li:nth-child(6) > :first-child,
+.smartart-theme-spring.smartart-rows > li:nth-child(6) > :first-child { background-color: #eee8aa; color: #333; }
+
+/*
+ * Summer Theme
+ */
+.smartart-theme-summer.smartart-chevron > li:nth-child(1) > :first-child,
+.smartart-theme-summer.smartart-column > li:nth-child(1) > :first-child,
+.smartart-theme-summer.smartart-rows > li:nth-child(1) > :first-child { background-color: #ffff00; color: #333; }
+.smartart-theme-summer.smartart-chevron > li:nth-child(2) > :first-child,
+.smartart-theme-summer.smartart-column > li:nth-child(2) > :first-child,
+.smartart-theme-summer.smartart-rows > li:nth-child(2) > :first-child { background-color: #ff8c00; color: white; }
+.smartart-theme-summer.smartart-chevron > li:nth-child(3) > :first-child,
+.smartart-theme-summer.smartart-column > li:nth-child(3) > :first-child,
+.smartart-theme-summer.smartart-rows > li:nth-child(3) > :first-child { background-color: #00bfff; color: white; }
+.smartart-theme-summer.smartart-chevron > li:nth-child(4) > :first-child,
+.smartart-theme-summer.smartart-column > li:nth-child(4) > :first-child,
+.smartart-theme-summer.smartart-rows > li:nth-child(4) > :first-child { background-color: #ff1493; color: white; }
+.smartart-theme-summer.smartart-chevron > li:nth-child(5) > :first-child,
+.smartart-theme-summer.smartart-column > li:nth-child(5) > :first-child,
+.smartart-theme-summer.smartart-rows > li:nth-child(5) > :first-child { background-color: #adff2f; color: #333; }
+.smartart-theme-summer.smartart-chevron > li:nth-child(6) > :first-child,
+.smartart-theme-summer.smartart-column > li:nth-child(6) > :first-child,
+.smartart-theme-summer.smartart-rows > li:nth-child(6) > :first-child { background-color: #ff69b4; color: white; }
+
+/*
+ * Pastel Theme
+ */
+.smartart-theme-pastel.smartart-chevron > li:nth-child(1) > :first-child,
+.smartart-theme-pastel.smartart-column > li:nth-child(1) > :first-child,
+.smartart-theme-pastel.smartart-rows > li:nth-child(1) > :first-child { background-color: #ffb3ba; color: #333; }
+.smartart-theme-pastel.smartart-chevron > li:nth-child(2) > :first-child,
+.smartart-theme-pastel.smartart-column > li:nth-child(2) > :first-child,
+.smartart-theme-pastel.smartart-rows > li:nth-child(2) > :first-child { background-color: #ffdfba; color: #333; }
+.smartart-theme-pastel.smartart-chevron > li:nth-child(3) > :first-child,
+.smartart-theme-pastel.smartart-column > li:nth-child(3) > :first-child,
+.smartart-theme-pastel.smartart-rows > li:nth-child(3) > :first-child { background-color: #ffffba; color: #333; }
+.smartart-theme-pastel.smartart-chevron > li:nth-child(4) > :first-child,
+.smartart-theme-pastel.smartart-column > li:nth-child(4) > :first-child,
+.smartart-theme-pastel.smartart-rows > li:nth-child(4) > :first-child { background-color: #baffc9; color: #333; }
+.smartart-theme-pastel.smartart-chevron > li:nth-child(5) > :first-child,
+.smartart-theme-pastel.smartart-column > li:nth-child(5) > :first-child,
+.smartart-theme-pastel.smartart-rows > li:nth-child(5) > :first-child { background-color: #bae1ff; color: #333; }
+.smartart-theme-pastel.smartart-chevron > li:nth-child(6) > :first-child,
+.smartart-theme-pastel.smartart-column > li:nth-child(6) > :first-child,
+.smartart-theme-pastel.smartart-rows > li:nth-child(6) > :first-child { background-color: #e0baff; color: #333; }
+
+/*
+ * Neon Theme
+ */
+.smartart-theme-neon.smartart-chevron > li:nth-child(1) > :first-child,
+.smartart-theme-neon.smartart-column > li:nth-child(1) > :first-child,
+.smartart-theme-neon.smartart-rows > li:nth-child(1) > :first-child { background-color: #39ff14; color: #333; }
+.smartart-theme-neon.smartart-chevron > li:nth-child(2) > :first-child,
+.smartart-theme-neon.smartart-column > li:nth-child(2) > :first-child,
+.smartart-theme-neon.smartart-rows > li:nth-child(2) > :first-child { background-color: #ff073a; color: white; }
+.smartart-theme-neon.smartart-chevron > li:nth-child(3) > :first-child,
+.smartart-theme-neon.smartart-column > li:nth-child(3) > :first-child,
+.smartart-theme-neon.smartart-rows > li:nth-child(3) > :first-child { background-color: #00ffff; color: #333; }
+.smartart-theme-neon.smartart-chevron > li:nth-child(4) > :first-child,
+.smartart-theme-neon.smartart-column > li:nth-child(4) > :first-child,
+.smartart-theme-neon.smartart-rows > li:nth-child(4) > :first-child { background-color: #ff00ff; color: white; }
+.smartart-theme-neon.smartart-chevron > li:nth-child(5) > :first-child,
+.smartart-theme-neon.smartart-column > li:nth-child(5) > :first-child,
+.smartart-theme-neon.smartart-rows > li:nth-child(5) > :first-child { background-color: #ffff00; color: #333; }
+.smartart-theme-neon.smartart-chevron > li:nth-child(6) > :first-child,
+.smartart-theme-neon.smartart-column > li:nth-child(6) > :first-child,
+.smartart-theme-neon.smartart-rows > li:nth-child(6) > :first-child { background-color: #cfff04; color: #333; }
+
+/*
+ * Grayscale Theme
+ */
+.smartart-theme-grayscale.smartart-chevron > li:nth-child(1) > :first-child,
+.smartart-theme-grayscale.smartart-column > li:nth-child(1) > :first-child,
+.smartart-theme-grayscale.smartart-rows > li:nth-child(1) > :first-child { background-color: #333333; color: white; }
+.smartart-theme-grayscale.smartart-chevron > li:nth-child(2) > :first-child,
+.smartart-theme-grayscale.smartart-column > li:nth-child(2) > :first-child,
+.smartart-theme-grayscale.smartart-rows > li:nth-child(2) > :first-child { background-color: #555555; color: white; }
+.smartart-theme-grayscale.smartart-chevron > li:nth-child(3) > :first-child,
+.smartart-theme-grayscale.smartart-column > li:nth-child(3) > :first-child,
+.smartart-theme-grayscale.smartart-rows > li:nth-child(3) > :first-child { background-color: #777777; color: white; }
+.smartart-theme-grayscale.smartart-chevron > li:nth-child(4) > :first-child,
+.smartart-theme-grayscale.smartart-column > li:nth-child(4) > :first-child,
+.smartart-theme-grayscale.smartart-rows > li:nth-child(4) > :first-child { background-color: #999999; color: white; }
+.smartart-theme-grayscale.smartart-chevron > li:nth-child(5) > :first-child,
+.smartart-theme-grayscale.smartart-column > li:nth-child(5) > :first-child,
+.smartart-theme-grayscale.smartart-rows > li:nth-child(5) > :first-child { background-color: #bbbbbb; color: #333; }
+.smartart-theme-grayscale.smartart-chevron > li:nth-child(6) > :first-child,
+.smartart-theme-grayscale.smartart-column > li:nth-child(6) > :first-child,
+.smartart-theme-grayscale.smartart-rows > li:nth-child(6) > :first-child { background-color: #dddddd; color: #333; }
+
+/*
+ * Rainbow Theme
+ */
+.smartart-theme-rainbow.smartart-chevron > li:nth-child(1) > :first-child,
+.smartart-theme-rainbow.smartart-column > li:nth-child(1) > :first-child,
+.smartart-theme-rainbow.smartart-rows > li:nth-child(1) > :first-child { background-color: #ff0000; color: white; }
+.smartart-theme-rainbow.smartart-chevron > li:nth-child(2) > :first-child,
+.smartart-theme-rainbow.smartart-column > li:nth-child(2) > :first-child,
+.smartart-theme-rainbow.smartart-rows > li:nth-child(2) > :first-child { background-color: #ff7f00; color: white; }
+.smartart-theme-rainbow.smartart-chevron > li:nth-child(3) > :first-child,
+.smartart-theme-rainbow.smartart-column > li:nth-child(3) > :first-child,
+.smartart-theme-rainbow.smartart-rows > li:nth-child(3) > :first-child { background-color: #ffff00; color: #333; }
+.smartart-theme-rainbow.smartart-chevron > li:nth-child(4) > :first-child,
+.smartart-theme-rainbow.smartart-column > li:nth-child(4) > :first-child,
+.smartart-theme-rainbow.smartart-rows > li:nth-child(4) > :first-child { background-color: #00ff00; color: #333; }
+.smartart-theme-rainbow.smartart-chevron > li:nth-child(5) > :first-child,
+.smartart-theme-rainbow.smartart-column > li:nth-child(5) > :first-child,
+.smartart-theme-rainbow.smartart-rows > li:nth-child(5) > :first-child { background-color: #0000ff; color: white; }
+.smartart-theme-rainbow.smartart-chevron > li:nth-child(6) > :first-child,
+.smartart-theme-rainbow.smartart-column > li:nth-child(6) > :first-child,
+.smartart-theme-rainbow.smartart-rows > li:nth-child(6) > :first-child { background-color: #4b0082; color: white; }
+
+/*
+ * Coffee Theme
+ */
+.smartart-theme-coffee.smartart-chevron > li:nth-child(1) > :first-child,
+.smartart-theme-coffee.smartart-column > li:nth-child(1) > :first-child,
+.smartart-theme-coffee.smartart-rows > li:nth-child(1) > :first-child { background-color: #6f4e37; color: white; }
+.smartart-theme-coffee.smartart-chevron > li:nth-child(2) > :first-child,
+.smartart-theme-coffee.smartart-column > li:nth-child(2) > :first-child,
+.smartart-theme-coffee.smartart-rows > li:nth-child(2) > :first-child { background-color: #a0522d; color: white; }
+.smartart-theme-coffee.smartart-chevron > li:nth-child(3) > :first-child,
+.smartart-theme-coffee.smartart-column > li:nth-child(3) > :first-child,
+.smartart-theme-coffee.smartart-rows > li:nth-child(3) > :first-child { background-color: #d2b48c; color: #333; }
+.smartart-theme-coffee.smartart-chevron > li:nth-child(4) > :first-child,
+.smartart-theme-coffee.smartart-column > li:nth-child(4) > :first-child,
+.smartart-theme-coffee.smartart-rows > li:nth-child(4) > :first-child { background-color: #f5deb3; color: #333; }
+.smartart-theme-coffee.smartart-chevron > li:nth-child(5) > :first-child,
+.smartart-theme-coffee.smartart-column > li:nth-child(5) > :first-child,
+.smartart-theme-coffee.smartart-rows > li:nth-child(5) > :first-child { background-color: #fff8dc; color: #333; }
+.smartart-theme-coffee.smartart-chevron > li:nth-child(6) > :first-child,
+.smartart-theme-coffee.smartart-column > li:nth-child(6) > :first-child,
+.smartart-theme-coffee.smartart-rows > li:nth-child(6) > :first-child { background-color: #f5f5dc; color: #333; }
