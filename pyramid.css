@@ -1,0 +1,160 @@
+/* Pyramid Smart Art CSS Library */
+/* CSS Variables - All customizable parameters */
+:root {
+  /* Colors - Default organizational hierarchy colors */
+  --pyramid-level-1-color: #4a90e2; 
+  --pyramid-level-2-color: #7cb342; 
+  --pyramid-level-3-color: #ffd54f; 
+  --pyramid-level-4-color: #e57373; 
+  --pyramid-level-5-color: #90a4ae; 
+  
+  /* Typography */
+  --pyramid-font-size: 18px;
+  --pyramid-font-weight: bold;
+  --pyramid-text-color: #333;
+  
+  /* Dimensions */
+  --pyramid-level-height: 80px;
+}
+
+/* Main pyramid container */
+.smartart-pyramid {
+  list-style: none;
+  margin: 0 auto;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0;
+}
+
+/* Individual pyramid levels - base styling */
+.smartart-pyramid > li {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: var(--pyramid-font-size);
+  font-weight: var(--pyramid-font-weight);
+  color: var(--pyramid-text-color);
+  height: var(--pyramid-level-height);
+  position: relative;
+}
+
+/* Level-specific widths and colors - Perfectly aligned pyramid structure */
+.smartart-pyramid > li:nth-child(1) {
+  width: 200px; 
+  height: 120px; 
+  background: var(--pyramid-level-1-color);
+  /* Perfect triangle shape */
+  clip-path: polygon(0% 100%, 50% 0%, 100% 100%);
+  padding-top: 25px; /* Adjust text positioning */
+}
+
+.smartart-pyramid > li:nth-child(2) {
+  width: 320px; 
+  background: var(--pyramid-level-2-color);
+  /* Aligns perfectly with triangle bottom edges */
+  clip-path: polygon(18.75% 0%, 81.25% 0%, 100% 100%, 0% 100%);
+  margin-top: -1px; /* Seamless connection */
+}
+
+.smartart-pyramid > li:nth-child(3) {
+  width: 440px; 
+  background: var(--pyramid-level-3-color);
+  /* Aligns with management bottom edges */
+  clip-path: polygon(13.64% 0%, 86.36% 0%, 100% 100%, 0% 100%);
+}
+
+.smartart-pyramid > li:nth-child(4) {
+  width: 560px;
+  background: var(--pyramid-level-4-color);
+  /* Aligns with team leads bottom edges */
+  clip-path: polygon(10.71% 0%, 89.29% 0%, 100% 100%, 0% 100%);
+}
+
+.smartart-pyramid > li:nth-child(5) {
+  width: 680px; 
+  background: var(--pyramid-level-5-color);
+  /* Aligns with developers bottom edges */
+  clip-path: polygon(8.82% 0%, 91.18% 0%, 100% 100%, 0% 100%);
+}
+
+/* Text content styling */
+.smartart-pyramid > li > * {
+  position: relative;
+  z-index: 2;
+  line-height: 1.2;
+}
+
+/* Responsive design */
+@media (max-width: 1200px) {
+  .smartart-pyramid {
+    transform: scale(0.8);
+    transform-origin: center top;
+  }
+}
+
+@media (max-width: 768px) {
+  .smartart-pyramid {
+    transform: scale(0.6);
+    transform-origin: center top;
+  }
+  
+  :root {
+    --pyramid-font-size: 16px;
+  }
+}
+
+@media (max-width: 480px) {
+  .smartart-pyramid {
+    transform: scale(0.4);
+    transform-origin: center top;
+  }
+  
+  :root {
+    --pyramid-font-size: 14px;
+  }
+}
+
+/* Alternative color schemes */
+
+/* Dark theme - Rich deep blues with subtle gradient */
+.smartart-pyramid.dark-theme {
+  --pyramid-level-1-color: #1e3a8a; /* Deep navy blue */
+  --pyramid-level-2-color: #2563eb; /* Royal blue */
+  --pyramid-level-3-color: #3b82f6; /* Bright blue */
+  --pyramid-level-4-color: #60a5fa; /* Sky blue */
+  --pyramid-level-5-color: #93c5fd; /* Light blue */
+  --pyramid-text-color: #ffffff;
+}
+
+/* Professional theme - Elegant teal to green gradient */
+.smartart-pyramid.professional-theme {
+  --pyramid-level-1-color: #0d9488; /* Deep teal */
+  --pyramid-level-2-color: #14b8a6; /* Teal */
+  --pyramid-level-3-color: #2dd4bf; /* Light teal */
+  --pyramid-level-4-color: #34d399; /* Emerald */
+  --pyramid-level-5-color: #6ee7b7; /* Light green */
+  --pyramid-text-color: #ffffff;
+}
+
+/* Warm theme - Vibrant sunset gradient */
+.smartart-pyramid.warm-theme {
+  --pyramid-level-1-color: #9d174d; /* Deep magenta */
+  --pyramid-level-2-color: #dc2626; /* Red */
+  --pyramid-level-3-color: #ea580c; /* Orange */
+  --pyramid-level-4-color: #d97706; /* Amber */
+  --pyramid-level-5-color: #fbbf24; /* Yellow */
+  --pyramid-text-color: #ffffff;
+}
+
+/* Monochrome theme - Indigo blue gradient with subtle variations */
+.smartart-pyramid.monochrome-theme {
+  --pyramid-level-1-color: #312e81; /* Deep indigo */
+  --pyramid-level-2-color: #4338ca; /* Indigo */
+  --pyramid-level-3-color: #4f46e5; /* Medium indigo */
+  --pyramid-level-4-color: #6366f1; /* Light indigo */
+  --pyramid-level-5-color: #818cf8; /* Pale indigo */
+  --pyramid-text-color: #ffffff;
+  --pyramid-font-weight: 600;
+}
