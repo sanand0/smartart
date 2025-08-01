@@ -2,8 +2,8 @@
 /* CSS Variables - All customizable parameters */
 :root {
   /* Dimensions */
-  --rows-width: 600px; /* Width of the smartart */
-  --rows-header-width: 200px; /* Width of each row header */
+  --smartart-rows-width: 600px; /* Width of the smartart */
+  --smartart-width: 200px; /* Width of each row header */
   --rows-gap: 15px; /* Gap between rows */
 
   /* Colors */
@@ -21,7 +21,7 @@
   flex-direction: column;
   margin: 0 auto; /* Center the rows list */
   gap: var(--rows-gap); /* Gap between rows */
-  width: var(--rows-width);
+  width: var(--smartart-rows-width);
 
   /* Each row item (contains header and content ul) */
   > li {
@@ -33,7 +33,7 @@
     /* Row header shapes (header inside li) */
     > :first-child {
       /* Dimensions */
-      width: var(--rows-header-width);
+      width: var(--smartart-width);
 
       /* Styling */
       background-color: var(--rows-bg-color);

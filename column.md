@@ -29,7 +29,7 @@ Create a column flow with semantic HTML:
 ```html
 <ul class="smartart-column">
   <li>
-    <h3 style="--column-bg-color: red">Planning</h3>
+    <h3>Planning</h3>
     <ul>
       <li>Define requirements</li>
       <li>Create timeline</li>
@@ -115,8 +115,8 @@ Customize the appearance using CSS custom properties:
 
 | Variable                   | Default   | Description                 |
 | -------------------------- | --------- | --------------------------- |
-| `--column-width`           | `200px`   | Width of each column header |
-| `--column-height`          | `60px`    | Height of column headers    |
+| `--smartart-width`         | `200px`   | Width of each column header |
+| `--smartart-height`        | `60px`    | Height of column headers    |
 | `--column-gap`             | `15px`    | Gap between sections        |
 | `--column-bg-color`        | `#e0e0e0` | Header background color     |
 | `--column-text-indent`     | `10px`    | Text indent for content box |
@@ -171,8 +171,8 @@ The standard appearance with clean, professional styling:
 
 ```css
 :root {
-  --column-width: 150px;
-  --column-height: 40px;
+  --smartart-width: 150px;
+  --smartart-height: 40px;
   --column-gap: 10px;
 }
 ```
@@ -185,8 +185,8 @@ The standard appearance with clean, professional styling:
 
 ```css
 :root {
-  --column-width: 300px;
-  --column-height: 100px;
+  --smartart-width: 300px;
+  --smartart-height: 100px;
   --column-gap: 20px;
 }
 ```

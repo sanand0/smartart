@@ -29,7 +29,7 @@ Create a chevron flow with semantic HTML:
 ```html
 <ul class="smartart-chevron">
   <li>
-    <h3 style="--chevron-bg-color: red">Planning</h3>
+    <h3>Planning</h3>
     <ul>
       <li>Define requirements</li>
       <li>Create timeline</li>
@@ -135,8 +135,8 @@ Customize the appearance using CSS custom properties:
 
 | Variable                    | Default   | Description                           |
 | --------------------------- | --------- | ------------------------------------- |
-| `--chevron-width`           | `200px`   | Width of each chevron header          |
-| `--chevron-height`          | `60px`    | Height of chevron headers             |
+| `--smartart-width`          | `200px`   | Width of each chevron header          |
+| `--smartart-height`         | `60px`    | Height of chevron headers             |
 | `--chevron-tip-width`       | `30px`    | Width of pointed tips                 |
 | `--chevron-gap`             | `20px`    | Gap between sections                  |
 | `--chevron-bg-color`        | `#e0e0e0` | Header background color               |
@@ -192,8 +192,8 @@ The standard appearance with clean, professional styling:
 
 ```css
 :root {
-  --chevron-width: 150px;
-  --chevron-height: 40px;
+  --smartart-width: 150px;
+  --smartart-height: 40px;
   --chevron-tip-width: 20px;
   --chevron-gap: 5px;
 }
@@ -207,8 +207,8 @@ The standard appearance with clean, professional styling:
 
 ```css
 :root {
-  --chevron-width: 300px;
-  --chevron-height: 100px;
+  --smartart-width: 300px;
+  --smartart-height: 100px;
   --chevron-tip-width: 50px;
   --chevron-gap: 30px;
 }

@@ -2,8 +2,8 @@
 /* CSS Variables - All customizable parameters */
 :root {
   /* Dimensions */
-  --chevron-width: 200px; /* Width of each chevron header */
-  --chevron-height: 60px; /* Height of chevron headers */
+  --smartart-width: 200px; /* Width of each chevron header */
+  --smartart-height: 60px; /* Height of chevron headers */
   --chevron-tip-width: 30px; /* Width of pointed tips on chevrons */
   --chevron-gap: 15px; /* Negative margin for chevron overlap */
 
@@ -32,8 +32,8 @@
     /* Chevron header shapes (header inside li) */
     > :first-child {
       /* Dimensions */
-      width: var(--chevron-width);
-      height: var(--chevron-height);
+      width: var(--smartart-width);
+      height: var(--smartart-height);
 
       /* Styling */
       background-color: var(--chevron-bg-color);
@@ -75,7 +75,7 @@
       justify-content: flex-start;
 
       /* Dimensions and positioning */
-      width: calc(var(--chevron-width) - var(--chevron-tip-width)); /* From left tip to right edge */
+      width: calc(var(--smartart-width) - var(--chevron-tip-width)); /* From left tip to right edge */
       margin-right: calc(var(--chevron-gap) - var(--chevron-tip-width)); /* Match chevron gap */
     }
 

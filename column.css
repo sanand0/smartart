@@ -2,8 +2,8 @@
 /* CSS Variables - All customizable parameters */
 :root {
   /* Dimensions */
-  --column-width: 200px; /* Width of each column header */
-  --column-height: 60px; /* Height of column headers */
+  --smartart-width: 200px; /* Width of each column header */
+  --smartart-height: 60px; /* Height of column headers */
   --column-gap: 15px; /* Gap between columns */
 
   /* Colors */
@@ -32,8 +32,8 @@
     /* Column header shapes (header inside li) */
     > :first-child {
       /* Dimensions */
-      width: var(--column-width);
-      height: var(--column-height);
+      width: var(--smartart-width);
+      height: var(--smartart-height);
 
       /* Styling */
       background-color: var(--column-bg-color);
@@ -60,7 +60,7 @@
       justify-content: flex-start;
 
       /* Dimensions and positioning */
-      width: var(--column-width);
+      width: var(--smartart-width);
     }
   }
 }

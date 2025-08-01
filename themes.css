@@ -1,0 +1,319 @@
+/* Smart Art Themes CSS Library */
+
+/*
+ * Microsoft Office Theme
+ *
+ * A vibrant, professional color palette inspired by Microsoft Office applications.
+ *
+ * Usage: <ul class="smartart-chevron smartart-theme-office">...</ul>
+ */
+.smartart-theme-office.smartart-chevron > li:nth-child(1) > :first-child,
+.smartart-theme-office.smartart-column > li:nth-child(1) > :first-child,
+.smartart-theme-office.smartart-rows > li:nth-child(1) > :first-child {
+  background-color: #4472c4; /* Blue */
+  color: white;
+}
+.smartart-theme-office.smartart-chevron > li:nth-child(1) > ul,
+.smartart-theme-office.smartart-column > li:nth-child(1) > ul,
+.smartart-theme-office.smartart-rows > li:nth-child(1) > ul {
+  background-color: #f2f2f2;
+  color: #333;
+}
+
+.smartart-theme-office.smartart-chevron > li:nth-child(2) > :first-child,
+.smartart-theme-office.smartart-column > li:nth-child(2) > :first-child,
+.smartart-theme-office.smartart-rows > li:nth-child(2) > :first-child {
+  background-color: #ed7d31; /* Orange */
+  color: white;
+}
+.smartart-theme-office.smartart-chevron > li:nth-child(2) > ul,
+.smartart-theme-office.smartart-column > li:nth-child(2) > ul,
+.smartart-theme-office.smartart-rows > li:nth-child(2) > ul {
+  background-color: #f2f2f2;
+  color: #333;
+}
+
+.smartart-theme-office.smartart-chevron > li:nth-child(3) > :first-child,
+.smartart-theme-office.smartart-column > li:nth-child(3) > :first-child,
+.smartart-theme-office.smartart-rows > li:nth-child(3) > :first-child {
+  background-color: #a5a5a5; /* Gray */
+  color: white;
+}
+.smartart-theme-office.smartart-chevron > li:nth-child(3) > ul,
+.smartart-theme-office.smartart-column > li:nth-child(3) > ul,
+.smartart-theme-office.smartart-rows > li:nth-child(3) > ul {
+  background-color: #f2f2f2;
+  color: #333;
+}
+
+.smartart-theme-office.smartart-chevron > li:nth-child(4) > :first-child,
+.smartart-theme-office.smartart-column > li:nth-child(4) > :first-child,
+.smartart-theme-office.smartart-rows > li:nth-child(4) > :first-child {
+  background-color: #ffc000; /* Yellow */
+  color: #333;
+}
+.smartart-theme-office.smartart-chevron > li:nth-child(4) > ul,
+.smartart-theme-office.smartart-column > li:nth-child(4) > ul,
+.smartart-theme-office.smartart-rows > li:nth-child(4) > ul {
+  background-color: #f2f2f2;
+  color: #333;
+}
+
+.smartart-theme-office.smartart-chevron > li:nth-child(5) > :first-child,
+.smartart-theme-office.smartart-column > li:nth-child(5) > :first-child,
+.smartart-theme-office.smartart-rows > li:nth-child(5) > :first-child {
+  background-color: #5b9bd5; /* Light Blue */
+  color: white;
+}
+.smartart-theme-office.smartart-chevron > li:nth-child(5) > ul,
+.smartart-theme-office.smartart-column > li:nth-child(5) > ul,
+.smartart-theme-office.smartart-rows > li:nth-child(5) > ul {
+  background-color: #f2f2f2;
+  color: #333;
+}
+
+.smartart-theme-office.smartart-chevron > li:nth-child(6) > :first-child,
+.smartart-theme-office.smartart-column > li:nth-child(6) > :first-child,
+.smartart-theme-office.smartart-rows > li:nth-child(6) > :first-child {
+  background-color: #70ad47; /* Green */
+  color: white;
+}
+.smartart-theme-office.smartart-chevron > li:nth-child(6) > ul,
+.smartart-theme-office.smartart-column > li:nth-child(6) > ul,
+.smartart-theme-office.smartart-rows > li:nth-child(6) > ul {
+  background-color: #f2f2f2;
+  color: #333;
+}
+
+/*
+ * ColorBrewer Set1 Theme
+ *
+ * A colorblind-safe palette designed for high-contrast data visualization.
+ *
+ * Usage: <ul class="smartart-chevron smartart-theme-colorbrewer-set1">...</ul>
+ */
+.smartart-theme-colorbrewer-set1.smartart-chevron > li:nth-child(1) > :first-child,
+.smartart-theme-colorbrewer-set1.smartart-column > li:nth-child(1) > :first-child,
+.smartart-theme-colorbrewer-set1.smartart-rows > li:nth-child(1) > :first-child {
+  background-color: #e41a1c; /* Red */
+  color: white;
+}
+.smartart-theme-colorbrewer-set1.smartart-chevron > li:nth-child(1) > ul,
+.smartart-theme-colorbrewer-set1.smartart-column > li:nth-child(1) > ul,
+.smartart-theme-colorbrewer-set1.smartart-rows > li:nth-child(1) > ul {
+  background-color: #f7f7f7;
+  color: #333;
+}
+
+.smartart-theme-colorbrewer-set1.smartart-chevron > li:nth-child(2) > :first-child,
+.smartart-theme-colorbrewer-set1.smartart-column > li:nth-child(2) > :first-child,
+.smartart-theme-colorbrewer-set1.smartart-rows > li:nth-child(2) > :first-child {
+  background-color: #377eb8; /* Blue */
+  color: white;
+}
+.smartart-theme-colorbrewer-set1.smartart-chevron > li:nth-child(2) > ul,
+.smartart-theme-colorbrewer-set1.smartart-column > li:nth-child(2) > ul,
+.smartart-theme-colorbrewer-set1.smartart-rows > li:nth-child(2) > ul {
+  background-color: #f7f7f7;
+  color: #333;
+}
+
+.smartart-theme-colorbrewer-set1.smartart-chevron > li:nth-child(3) > :first-child,
+.smartart-theme-colorbrewer-set1.smartart-column > li:nth-child(3) > :first-child,
+.smartart-theme-colorbrewer-set1.smartart-rows > li:nth-child(3) > :first-child {
+  background-color: #4daf4a; /* Green */
+  color: white;
+}
+.smartart-theme-colorbrewer-set1.smartart-chevron > li:nth-child(3) > ul,
+.smartart-theme-colorbrewer-set1.smartart-column > li:nth-child(3) > ul,
+.smartart-theme-colorbrewer-set1.smartart-rows > li:nth-child(3) > ul {
+  background-color: #f7f7f7;
+  color: #333;
+}
+
+.smartart-theme-colorbrewer-set1.smartart-chevron > li:nth-child(4) > :first-child,
+.smartart-theme-colorbrewer-set1.smartart-column > li:nth-child(4) > :first-child,
+.smartart-theme-colorbrewer-set1.smartart-rows > li:nth-child(4) > :first-child {
+  background-color: #984ea3; /* Purple */
+  color: white;
+}
+.smartart-theme-colorbrewer-set1.smartart-chevron > li:nth-child(4) > ul,
+.smartart-theme-colorbrewer-set1.smartart-column > li:nth-child(4) > ul,
+.smartart-theme-colorbrewer-set1.smartart-rows > li:nth-child(4) > ul {
+  background-color: #f7f7f7;
+  color: #333;
+}
+
+.smartart-theme-colorbrewer-set1.smartart-chevron > li:nth-child(5) > :first-child,
+.smartart-theme-colorbrewer-set1.smartart-column > li:nth-child(5) > :first-child,
+.smartart-theme-colorbrewer-set1.smartart-rows > li:nth-child(5) > :first-child {
+  background-color: #ff7f00; /* Orange */
+  color: white;
+}
+.smartart-theme-colorbrewer-set1.smartart-chevron > li:nth-child(5) > ul,
+.smartart-theme-colorbrewer-set1.smartart-column > li:nth-child(5) > ul,
+.smartart-theme-colorbrewer-set1.smartart-rows > li:nth-child(5) > ul {
+  background-color: #f7f7f7;
+  color: #333;
+}
+
+.smartart-theme-colorbrewer-set1.smartart-chevron > li:nth-child(6) > :first-child,
+.smartart-theme-colorbrewer-set1.smartart-column > li:nth-child(6) > :first-child,
+.smartart-theme-colorbrewer-set1.smartart-rows > li:nth-child(6) > :first-child {
+  background-color: #ffff33; /* Yellow */
+  color: #333;
+}
+.smartart-theme-colorbrewer-set1.smartart-chevron > li:nth-child(6) > ul,
+.smartart-theme-colorbrewer-set1.smartart-column > li:nth-child(6) > ul,
+.smartart-theme-colorbrewer-set1.smartart-rows > li:nth-child(6) > ul {
+  background-color: #f7f7f7;
+  color: #333;
+}
+
+/*
+ * Solarized Light Theme
+ *
+ * A light, low-contrast theme popular with programmers.
+ *
+ * Usage: <ul class="smartart-chevron smartart-theme-solarized-light">...</ul>
+ */
+.smartart-theme-solarized-light.smartart-chevron > li > :first-child,
+.smartart-theme-solarized-light.smartart-column > li > :first-child,
+.smartart-theme-solarized-light.smartart-rows > li > :first-child {
+  color: #657b83; /* base00 */
+}
+.smartart-theme-solarized-light.smartart-chevron > li > ul,
+.smartart-theme-solarized-light.smartart-column > li > ul,
+.smartart-theme-solarized-light.smartart-rows > li > ul {
+  background-color: #fdf6e3; /* base3 */
+  color: #657b83; /* base00 */
+}
+.smartart-theme-solarized-light.smartart-chevron > li:nth-child(1) > :first-child,
+.smartart-theme-solarized-light.smartart-column > li:nth-child(1) > :first-child,
+.smartart-theme-solarized-light.smartart-rows > li:nth-child(1) > :first-child { background-color: #b58900; /* yellow */ }
+.smartart-theme-solarized-light.smartart-chevron > li:nth-child(2) > :first-child,
+.smartart-theme-solarized-light.smartart-column > li:nth-child(2) > :first-child,
+.smartart-theme-solarized-light.smartart-rows > li:nth-child(2) > :first-child { background-color: #cb4b16; /* orange */ }
+.smartart-theme-solarized-light.smartart-chevron > li:nth-child(3) > :first-child,
+.smartart-theme-solarized-light.smartart-column > li:nth-child(3) > :first-child,
+.smartart-theme-solarized-light.smartart-rows > li:nth-child(3) > :first-child { background-color: #dc322f; /* red */ }
+.smartart-theme-solarized-light.smartart-chevron > li:nth-child(4) > :first-child,
+.smartart-theme-solarized-light.smartart-column > li:nth-child(4) > :first-child,
+.smartart-theme-solarized-light.smartart-rows > li:nth-child(4) > :first-child { background-color: #d33682; /* magenta */ }
+.smartart-theme-solarized-light.smartart-chevron > li:nth-child(5) > :first-child,
+.smartart-theme-solarized-light.smartart-column > li:nth-child(5) > :first-child,
+.smartart-theme-solarized-light.smartart-rows > li:nth-child(5) > :first-child { background-color: #6c71c4; /* violet */ }
+.smartart-theme-solarized-light.smartart-chevron > li:nth-child(6) > :first-child,
+.smartart-theme-solarized-light.smartart-column > li:nth-child(6) > :first-child,
+.smartart-theme-solarized-light.smartart-rows > li:nth-child(6) > :first-child { background-color: #268bd2; /* blue */ }
+
+/*
+ * Solarized Dark Theme
+ *
+ * A dark, low-contrast theme popular with programmers.
+ *
+ * Usage: <ul class="smartart-chevron smartart-theme-solarized-dark">...</ul>
+ */
+.smartart-theme-solarized-dark.smartart-chevron > li > :first-child,
+.smartart-theme-solarized-dark.smartart-column > li > :first-child,
+.smartart-theme-solarized-dark.smartart-rows > li > :first-child {
+  color: #839496; /* base0 */
+}
+.smartart-theme-solarized-dark.smartart-chevron > li > ul,
+.smartart-theme-solarized-dark.smartart-column > li > ul,
+.smartart-theme-solarized-dark.smartart-rows > li > ul {
+  background-color: #002b36; /* base03 */
+  color: #839496; /* base0 */
+}
+.smartart-theme-solarized-dark.smartart-chevron > li:nth-child(1) > :first-child,
+.smartart-theme-solarized-dark.smartart-column > li:nth-child(1) > :first-child,
+.smartart-theme-solarized-dark.smartart-rows > li:nth-child(1) > :first-child { background-color: #b58900; /* yellow */ }
+.smartart-theme-solarized-dark.smartart-chevron > li:nth-child(2) > :first-child,
+.smartart-theme-solarized-dark.smartart-column > li:nth-child(2) > :first-child,
+.smartart-theme-solarized-dark.smartart-rows > li:nth-child(2) > :first-child { background-color: #cb4b16; /* orange */ }
+.smartart-theme-solarized-dark.smartart-chevron > li:nth-child(3) > :first-child,
+.smartart-theme-solarized-dark.smartart-column > li:nth-child(3) > :first-child,
+.smartart-theme-solarized-dark.smartart-rows > li:nth-child(3) > :first-child { background-color: #dc322f; /* red */ }
+.smartart-theme-solarized-dark.smartart-chevron > li:nth-child(4) > :first-child,
+.smartart-theme-solarized-dark.smartart-column > li:nth-child(4) > :first-child,
+.smartart-theme-solarized-dark.smartart-rows > li:nth-child(4) > :first-child { background-color: #d33682; /* magenta */ }
+.smartart-theme-solarized-dark.smartart-chevron > li:nth-child(5) > :first-child,
+.smartart-theme-solarized-dark.smartart-column > li:nth-child(5) > :first-child,
+.smartart-theme-solarized-dark.smartart-rows > li:nth-child(5) > :first-child { background-color: #6c71c4; /* violet */ }
+.smartart-theme-solarized-dark.smartart-chevron > li:nth-child(6) > :first-child,
+.smartart-theme-solarized-dark.smartart-column > li:nth-child(6) > :first-child,
+.smartart-theme-solarized-dark.smartart-rows > li:nth-child(6) > :first-child { background-color: #268bd2; /* blue */ }
+
+/*
+ * Dracula Theme
+ *
+ * A popular dark theme for programmers.
+ *
+ * Usage: <ul class="smartart-chevron smartart-theme-dracula">...</ul>
+ */
+.smartart-theme-dracula.smartart-chevron > li > :first-child,
+.smartart-theme-dracula.smartart-column > li > :first-child,
+.smartart-theme-dracula.smartart-rows > li > :first-child {
+  color: #f8f8f2; /* foreground */
+}
+.smartart-theme-dracula.smartart-chevron > li > ul,
+.smartart-theme-dracula.smartart-column > li > ul,
+.smartart-theme-dracula.smartart-rows > li > ul {
+  background-color: #282a36; /* background */
+  color: #f8f8f2; /* foreground */
+}
+.smartart-theme-dracula.smartart-chevron > li:nth-child(1) > :first-child,
+.smartart-theme-dracula.smartart-column > li:nth-child(1) > :first-child,
+.smartart-theme-dracula.smartart-rows > li:nth-child(1) > :first-child { background-color: #6272a4; /* comment */ }
+.smartart-theme-dracula.smartart-chevron > li:nth-child(2) > :first-child,
+.smartart-theme-dracula.smartart-column > li:nth-child(2) > :first-child,
+.smartart-theme-dracula.smartart-rows > li:nth-child(2) > :first-child { background-color: #8be9fd; /* cyan */ }
+.smartart-theme-dracula.smartart-chevron > li:nth-child(3) > :first-child,
+.smartart-theme-dracula.smartart-column > li:nth-child(3) > :first-child,
+.smartart-theme-dracula.smartart-rows > li:nth-child(3) > :first-child { background-color: #50fa7b; /* green */ }
+.smartart-theme-dracula.smartart-chevron > li:nth-child(4) > :first-child,
+.smartart-theme-dracula.smartart-column > li:nth-child(4) > :first-child,
+.smartart-theme-dracula.smartart-rows > li:nth-child(4) > :first-child { background-color: #ffb86c; /* orange */ }
+.smartart-theme-dracula.smartart-chevron > li:nth-child(5) > :first-child,
+.smartart-theme-dracula.smartart-column > li:nth-child(5) > :first-child,
+.smartart-theme-dracula.smartart-rows > li:nth-child(5) > :first-child { background-color: #ff79c6; /* pink */ }
+.smartart-theme-dracula.smartart-chevron > li:nth-child(6) > :first-child,
+.smartart-theme-dracula.smartart-column > li:nth-child(6) > :first-child,
+.smartart-theme-dracula.smartart-rows > li:nth-child(6) > :first-child { background-color: #bd93f9; /* purple */ }
+
+/*
+ * Monokai Theme
+ *
+ * A classic dark theme for programmers.
+ *
+ * Usage: <ul class="smartart-chevron smartart-theme-monokai">...</ul>
+ */
+.smartart-theme-monokai.smartart-chevron > li > :first-child,
+.smartart-theme-monokai.smartart-column > li > :first-child,
+.smartart-theme-monokai.smartart-rows > li > :first-child {
+  color: #f8f8f2; /* foreground */
+}
+.smartart-theme-monokai.smartart-chevron > li > ul,
+.smartart-theme-monokai.smartart-column > li > ul,
+.smartart-theme-monokai.smartart-rows > li > ul {
+  background-color: #272822; /* background */
+  color: #f8f8f2; /* foreground */
+}
+.smartart-theme-monokai.smartart-chevron > li:nth-child(1) > :first-child,
+.smartart-theme-monokai.smartart-column > li:nth-child(1) > :first-child,
+.smartart-theme-monokai.smartart-rows > li:nth-child(1) > :first-child { background-color: #f92672; /* pink */ }
+.smartart-theme-monokai.smartart-chevron > li:nth-child(2) > :first-child,
+.smartart-theme-monokai.smartart-column > li:nth-child(2) > :first-child,
+.smartart-theme-monokai.smartart-rows > li:nth-child(2) > :first-child { background-color: #a6e22e; /* green */ }
+.smartart-theme-monokai.smartart-chevron > li:nth-child(3) > :first-child,
+.smartart-theme-monokai.smartart-column > li:nth-child(3) > :first-child,
+.smartart-theme-monokai.smartart-rows > li:nth-child(3) > :first-child { background-color: #fd971f; /* orange */ }
+.smartart-theme-monokai.smartart-chevron > li:nth-child(4) > :first-child,
+.smartart-theme-monokai.smartart-column > li:nth-child(4) > :first-child,
+.smartart-theme-monokai.smartart-rows > li:nth-child(4) > :first-child { background-color: #66d9ef; /* blue */ }
+.smartart-theme-monokai.smartart-chevron > li:nth-child(5) > :first-child,
+.smartart-theme-monokai.smartart-column > li:nth-child(5) > :first-child,
+.smartart-theme-monokai.smartart-rows > li:nth-child(5) > :first-child { background-color: #ae81ff; /* purple */ }
+.smartart-theme-monokai.smartart-chevron > li:nth-child(6) > :first-child,
+.smartart-theme-monokai.smartart-column > li:nth-child(6) > :first-child,
+.smartart-theme-monokai.smartart-rows > li:nth-child(6) > :first-child { background-color: #e6db74; /* yellow */ }

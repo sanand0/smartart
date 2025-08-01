@@ -29,7 +29,7 @@ Create a rows flow with semantic HTML:
 ```html
 <ul class="smartart-rows">
   <li>
-    <h3 style="--rows-bg-color: red">Planning</h3>
+    <h3>Planning</h3>
     <ul>
       <li>Define requirements</li>
       <li>Create timeline</li>
@@ -115,8 +115,8 @@ Customize the appearance using CSS custom properties:
 
 | Variable                 | Default   | Description                 |
 | ------------------------ | --------- | --------------------------- |
-| `--rows-width`           | `600px`   | Width of the smartart       |
-| `--rows-header-width`    | `200px`   | Width of each row header    |
+| `--smartart-rows-width`  | `600px`   | Width of the smartart       |
+| `--smartart-width`       | `200px`   | Width of each row header    |
 | `--rows-gap`             | `15px`    | Gap between sections        |
 | `--rows-bg-color`        | `#e0e0e0` | Header background color     |
 | `--rows-text-indent`     | `10px`    | Text indent for content box |
@@ -171,8 +171,8 @@ The standard appearance with clean, professional styling:
 
 ```css
 :root {
-  --rows-width: 400px;
-  --rows-header-width: 150px;
+  --smartart-rows-width: 400px;
+  --smartart-width: 150px;
   --rows-gap: 10px;
 }
 ```
@@ -185,8 +185,8 @@ The standard appearance with clean, professional styling:
 
 ```css
 :root {
-  --rows-width: 800px;
-  --rows-header-width: 300px;
+  --smartart-rows-width: 800px;
+  --smartart-width: 300px;
   --rows-gap: 20px;
 }
 ```

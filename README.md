@@ -24,6 +24,12 @@ Lists of items with headers, oriented horizontally. **[Read Rows Docs &raquo;](r
 
 [![Rows Example](https://raw.githubusercontent.com/sanand0/smartart/main/docs/rows-colorful.webp)](rows.md)
 
+## Themes
+
+Color themes for all smartart types. **[Read Themes Docs &raquo;](themes.md)**
+
+[![Theme Example](https://raw.githubusercontent.com/sanand0/smartart/main/docs/theme-office.webp)](themes.md)
+
 ## Cycle
 
 Circular flow diagrams for cyclical processes
