@@ -46,7 +46,7 @@
   height: 120px; 
   background: var(--pyramid-level-1-color);
   /* Perfect triangle shape */
-  clip-path: polygon(0% 100%, 50% 0%, 100% 100%);
+  clip-path: polygon(0% 100%, 47% 0%, 100% 100%);
   padding-top: 25px; /* Adjust text positioning */
 }
 
