@@ -1,0 +1,200 @@
+.smartart-progresstracker {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+  padding: 0;
+  margin: 40px 0;
+  max-width: 800px;
+  width: 100%;
+  counter-reset: step-counter;
+}
+
+/* Base connecting line (gray background) */
+.smartart-progresstracker::before {
+  content: '';
+  position: absolute;
+  top: 25px;
+  left: 25px;
+  right: 25px;
+  height: 4px;
+  background: #e9ecef;
+  z-index: 1;
+  border-radius: 2px;
+}
+
+/* Progress line that fills based on active steps only */
+.smartart-progresstracker::after {
+  content: '';
+  position: absolute;
+  top: 25px;
+  left: 25px;
+  height: 4px;
+  background: #28a745;
+  z-index: 2;
+  border-radius: 2px;
+  width: 0;
+  transition: width 0.3s ease;
+}
+
+/* Individual step items */
+.smartart-progresstracker li {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  z-index: 3;
+  flex: 1;
+  font-weight: 600;
+  font-size: 14px;
+  text-align: center;
+  color: #6c757d;
+}
+
+/* Step circles (using ::before pseudo-element) */
+.smartart-progresstracker li::before {
+  content: counter(step-counter);
+  counter-increment: step-counter;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 600;
+  font-size: 16px;
+  margin-bottom: 12px;
+  border: 3px solid #dee2e6;
+  background: #f8f9fa;
+  color: #6c757d;
+}
+
+/* Completed steps - Green with checkmark */
+.smartart-progresstracker li.completed::before {
+  content: '✓';
+  background: #28a745;
+  border-color: #28a745;
+  color: white;
+}
+
+.smartart-progresstracker li.completed {
+  color: #28a745;
+}
+
+/* Active step - Blue */
+.smartart-progresstracker li.active::before {
+  background: #007bff;
+  border-color: #007bff;
+  color: white;
+}
+
+.smartart-progresstracker li.active {
+  color: #007bff;
+}
+
+/* Progress line logic - fills based on the active step */
+.smartart-progresstracker li.active:nth-child(1)::after {
+  width: 0;
+}
+
+.smartart-progresstracker li.active:nth-child(2) ~ .smartart-progresstracker::after {
+  width: 33%;
+}
+
+.smartart-progresstracker li.active:nth-child(3) ~ .smartart-progresstracker::after {
+  width: 66%;
+}
+
+.smartart-progresstracker li.active:nth-child(4) ~ .smartart-progresstracker::after {
+  width: 100%;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .smartart-progresstracker {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 15px;
+  }
+
+  .smartart-progresstracker::before,
+  .smartart-progresstracker::after {
+    left: 25px;
+    top: 0;
+    bottom: 0;
+    width: 4px;
+    height: 100%;
+    right: auto;
+  }
+
+  .smartart-progresstracker li {
+    flex-direction: row;
+    align-items: center;
+    width: 100%;
+    text-align: left;
+  }
+
+  .smartart-progresstracker li::before {
+    margin-right: 15px;
+    margin-bottom: 0;
+    width: 40px;
+    height: 40px;
+    font-size: 14px;
+  }
+}
+
+/* Vertical Progress Tracker */
+.smartart-progresstracker.vertical {
+  flex-direction: column;
+  align-items: flex-start;
+  max-width: 300px;
+}
+
+.smartart-progresstracker.vertical::before {
+  top: 25px;
+  bottom: 25px;
+  left: 25px;
+  width: 4px;
+  height: calc(100% - 50px);
+  right: auto;
+}
+
+.smartart-progresstracker.vertical::after {
+  top: 25px;
+  left: 25px;
+  width: 4px;
+  height: 0;
+  right: auto;
+}
+
+.smartart-progresstracker.vertical li.active:nth-child(1) ~ .smartart-progresstracker::after {
+  height: 0;
+}
+
+.smartart-progresstracker.vertical li.active:nth-child(2) ~ .smartart-progresstracker::after {
+  height: 33%;
+}
+
+.smartart-progresstracker.vertical li.active:nth-child(3) ~ .smartart-progresstracker::after {
+  height: 66%;
+}
+
+.smartart-progresstracker.vertical li.active:nth-child(4) ~ .smartart-progresstracker::after {
+  height: 100%;
+}
+
+.smartart-progresstracker.vertical li {
+  flex-direction: row;
+  align-items: center;
+  width: 100%;
+  margin-bottom: 30px;
+  text-align: left;
+}
+
+.smartart-progresstracker.vertical li::before {
+  margin-right: 20px;
+  margin-bottom: 0;
+}
+
+
