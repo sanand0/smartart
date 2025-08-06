@@ -1,18 +1,23 @@
+/* GitHub Flavored Markdown Progress Tracker - Pure Implementation */
 .smartart-progresstracker {
+  max-width: 800px;
+  margin: 40px 0;
+  position: relative;
+}
+
+.smartart-progresstracker ul {
   list-style: none;
   display: flex;
   align-items: center;
   justify-content: space-between;
   position: relative;
-  padding: 0;
-  margin: 40px 0;
-  max-width: 800px;
+  padding: 0 30px;
+  margin: 0;
   width: 100%;
-  counter-reset: step-counter;
 }
 
 /* Base connecting line (gray background) */
-.smartart-progresstracker::before {
+.smartart-progresstracker ul::before {
   content: '';
   position: absolute;
   top: 25px;
@@ -24,8 +29,8 @@
   border-radius: 2px;
 }
 
-/* Progress line that fills based on active steps only */
-.smartart-progresstracker::after {
+/* Progress line that fills based on completed checkboxes */
+.smartart-progresstracker ul::after {
   content: '';
   position: absolute;
   top: 25px;
@@ -34,8 +39,8 @@
   background: #28a745;
   z-index: 2;
   border-radius: 2px;
+  transition: all 0.3s ease;
   width: 0;
-  transition: width 0.3s ease;
 }
 
 /* Individual step items */
@@ -46,16 +51,33 @@
   position: relative;
   z-index: 3;
   flex: 1;
+  text-align: center;
+  padding-top: 70px;
+  padding-left: 0;
+  padding-right: 0;
   font-weight: 600;
   font-size: 14px;
-  text-align: center;
   color: #6c757d;
+  width: auto;
+  min-width: 80px;
 }
 
-/* Step circles (using ::before pseudo-element) */
+/* Hide the actual checkbox but keep it accessible */
+.smartart-progresstracker input[type="checkbox"] {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+
+/* Create custom checkbox appearance with numbers */
 .smartart-progresstracker li::before {
-  content: counter(step-counter);
-  counter-increment: step-counter;
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
   width: 50px;
   height: 50px;
   border-radius: 50%;
@@ -64,62 +86,122 @@
   justify-content: center;
   font-weight: 600;
   font-size: 16px;
-  margin-bottom: 12px;
   border: 3px solid #dee2e6;
   background: #f8f9fa;
   color: #6c757d;
+  z-index: 3;
 }
 
+/* Step numbers inside circles */
+.smartart-progresstracker li:nth-child(1)::before { content: '1'; }
+.smartart-progresstracker li:nth-child(2)::before { content: '2'; }
+.smartart-progresstracker li:nth-child(3)::before { content: '3'; }
+.smartart-progresstracker li:nth-child(4)::before { content: '4'; }
+.smartart-progresstracker li:nth-child(5)::before { content: '5'; }
+
 /* Completed steps - Green with checkmark */
-.smartart-progresstracker li.completed::before {
-  content: '✓';
+.smartart-progresstracker li:has(input[type="checkbox"]:checked)::before {
+  content: '✓' !important;
   background: #28a745;
   border-color: #28a745;
   color: white;
 }
 
-.smartart-progresstracker li.completed {
+.smartart-progresstracker li:has(input[type="checkbox"]:checked) {
   color: #28a745;
 }
 
-/* Active step - Blue */
-.smartart-progresstracker li.active::before {
-  background: #007bff;
-  border-color: #007bff;
-  color: white;
+/* Progress line logic - Calculate width based on completed checkboxes */
+.smartart-progresstracker ul:has(li:nth-child(1):has(input[type="checkbox"]:checked))::after {
+  width: 25%;
 }
 
-.smartart-progresstracker li.active {
-  color: #007bff;
+.smartart-progresstracker ul:has(li:nth-child(2):has(input[type="checkbox"]:checked))::after {
+  width: 50%;
 }
 
-/* Progress line logic - fills based on the active step */
-.smartart-progresstracker li.active:nth-child(1)::after {
-  width: 0;
+.smartart-progresstracker ul:has(li:nth-child(3):has(input[type="checkbox"]:checked))::after {
+  width: 75%;
 }
 
-.smartart-progresstracker li.active:nth-child(2) ~ .smartart-progresstracker::after {
-  width: 33%;
-}
-
-.smartart-progresstracker li.active:nth-child(3) ~ .smartart-progresstracker::after {
-  width: 66%;
-}
-
-.smartart-progresstracker li.active:nth-child(4) ~ .smartart-progresstracker::after {
+.smartart-progresstracker ul:has(li:nth-child(4):has(input[type="checkbox"]:checked))::after {
   width: 100%;
+}
+
+/* Vertical Progress Tracker */
+.smartart-progresstracker.vertical ul {
+  flex-direction: column;
+  align-items: flex-start;
+  max-width: 300px;
+  height: 400px;
+  justify-content: space-between;
+  padding: 20px 0;
+}
+
+.smartart-progresstracker.vertical ul::before {
+  top: 10%;
+  left: 25px;
+  width: 4px;
+  height: 80%;
+  right: auto;
+  background: #e9ecef;
+}
+
+.smartart-progresstracker.vertical ul::after {
+  top: 10%;
+  left: 25px;
+  width: 4px;
+  height: 0;
+  right: auto;
+  background: #28a745;
+}
+
+.smartart-progresstracker.vertical li {
+  flex-direction: row;
+  align-items: center;
+  width: 100%;
+  margin-bottom: 60px;
+  padding-top: 0;
+  padding-left: 70px;
+  text-align: left;
+}
+
+.smartart-progresstracker.vertical li:last-child {
+  margin-bottom: 0;
+}
+
+.smartart-progresstracker.vertical li::before {
+  left: 0;
+  transform: none;
+}
+
+/* Vertical progress line fill logic */
+.smartart-progresstracker.vertical ul:has(li:nth-child(1):has(input[type="checkbox"]:checked))::after {
+  height: 25%;
+}
+
+.smartart-progresstracker.vertical ul:has(li:nth-child(2):has(input[type="checkbox"]:checked))::after {
+  height: 50%;
+}
+
+.smartart-progresstracker.vertical ul:has(li:nth-child(3):has(input[type="checkbox"]:checked))::after {
+  height: 75%;
+}
+
+.smartart-progresstracker.vertical ul:has(li:nth-child(4):has(input[type="checkbox"]:checked))::after {
+  height: 100%;
 }
 
 /* Responsive Design */
 @media (max-width: 768px) {
-  .smartart-progresstracker {
+  .smartart-progresstracker ul {
     flex-direction: column;
     align-items: flex-start;
     gap: 15px;
   }
 
-  .smartart-progresstracker::before,
-  .smartart-progresstracker::after {
+  .smartart-progresstracker ul::before,
+  .smartart-progresstracker ul::after {
     left: 25px;
     top: 0;
     bottom: 0;
@@ -133,68 +215,16 @@
     align-items: center;
     width: 100%;
     text-align: left;
+    padding-top: 0;
+    padding-left: 60px;
+    margin-bottom: 20px;
   }
 
   .smartart-progresstracker li::before {
-    margin-right: 15px;
-    margin-bottom: 0;
+    left: 0;
+    transform: none;
     width: 40px;
     height: 40px;
     font-size: 14px;
   }
 }
-
-/* Vertical Progress Tracker */
-.smartart-progresstracker.vertical {
-  flex-direction: column;
-  align-items: flex-start;
-  max-width: 300px;
-}
-
-.smartart-progresstracker.vertical::before {
-  top: 25px;
-  bottom: 25px;
-  left: 25px;
-  width: 4px;
-  height: calc(100% - 50px);
-  right: auto;
-}
-
-.smartart-progresstracker.vertical::after {
-  top: 25px;
-  left: 25px;
-  width: 4px;
-  height: 0;
-  right: auto;
-}
-
-.smartart-progresstracker.vertical li.active:nth-child(1) ~ .smartart-progresstracker::after {
-  height: 0;
-}
-
-.smartart-progresstracker.vertical li.active:nth-child(2) ~ .smartart-progresstracker::after {
-  height: 33%;
-}
-
-.smartart-progresstracker.vertical li.active:nth-child(3) ~ .smartart-progresstracker::after {
-  height: 66%;
-}
-
-.smartart-progresstracker.vertical li.active:nth-child(4) ~ .smartart-progresstracker::after {
-  height: 100%;
-}
-
-.smartart-progresstracker.vertical li {
-  flex-direction: row;
-  align-items: center;
-  width: 100%;
-  margin-bottom: 30px;
-  text-align: left;
-}
-
-.smartart-progresstracker.vertical li::before {
-  margin-right: 20px;
-  margin-bottom: 0;
-}
-
-
