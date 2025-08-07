@@ -1,0 +1,33 @@
+name: Auto Screenshot After GitHub Pages Deployment
+
+on:
+  push:
+    branches: ["*"]
+
+jobs:
+  screenshot:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: '18'
+
+      - name: Run Screenshot Generator
+        uses: krishna-gramener/github-screenshots@v1.0
+        with:
+          screenshots: "/docs/progresstracker-vertical.html=screenshots/progresstracker-vertical.webp,/docs/progresstracker-basic.html=screenshots/progresstracker-basic.webp"
+          
+      - name: Commit screenshot
+        run: |
+          git config user.name "github-actions"
+          git config user.email "github-actions@github.com"
+          git add .
+          git commit -m "📸 Updated full-page screenshot" || echo "No changes to commit"
+          git push
