@@ -30,7 +30,12 @@ Circular flow diagrams for cyclical processes
 
 ## Pyramid
 
-Hierarchical structures and organizational charts
+
+## Progress Tracker
+
+Visual indicators for tracking progress through steps. **[Read Progress Tracker Docs &raquo;](progresstracker.md)**
+
+[![Progress Tracker Example](https://raw.githubusercontent.com/sanand0/smartart/main/docs/progresstracker-basic.webp)](progresstracker.md)
 
 ## Funnel
 
