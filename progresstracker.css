@@ -1,11 +1,24 @@
-/* GitHub Flavored Markdown Progress Tracker - Pure Implementation */
-.smartart-progresstracker {
+/* SmartArt Progress Tracker - Modern Implementation */
+
+/* Main container */
+.sm-progresstracker {
+  /* Customizable variables */
+  --step-size: 50px;         /* Size of the step circles */
+  --line-thickness: 4px;     /* Thickness of the progress line */
+  --line-color: #e9ecef;     /* Color of the base line */
+  --progress-color: #28a745; /* Color of the progress line */
+  --circle-bg: #f8f9fa;      /* Background color of uncompleted circles */
+  --circle-border: #dee2e6;  /* Border color of uncompleted circles */
+  --text-color: #6c757d;     /* Text color for uncompleted steps */
+  --completed-color: #28a745;/* Color for completed steps */
+  --spacing: 40px;           /* Spacing between elements */
+  
   max-width: 800px;
   margin: 40px 0;
   position: relative;
 }
 
-.smartart-progresstracker ul {
+.sm-progresstracker > ul {
   list-style: none;
   display: flex;
   align-items: center;
@@ -17,34 +30,34 @@
 }
 
 /* Base connecting line (gray background) */
-.smartart-progresstracker ul::before {
+.sm-progresstracker > ul::before {
   content: '';
   position: absolute;
-  top: 25px;
+  top: calc(var(--step-size) / 2);
   left: 25px;
   right: 25px;
-  height: 4px;
-  background: #e9ecef;
+  height: var(--line-thickness);
+  background: var(--line-color);
   z-index: 1;
-  border-radius: 2px;
+  border-radius: calc(var(--line-thickness) / 2);
 }
 
 /* Progress line that fills based on completed checkboxes */
-.smartart-progresstracker ul::after {
+.sm-progresstracker > ul::after {
   content: '';
   position: absolute;
-  top: 25px;
+  top: calc(var(--step-size) / 2);
   left: 25px;
-  height: 4px;
-  background: #28a745;
+  height: var(--line-thickness);
+  background: var(--progress-color);
   z-index: 2;
-  border-radius: 2px;
+  border-radius: calc(var(--line-thickness) / 2);
   transition: all 0.3s ease;
   width: 0;
 }
 
 /* Individual step items */
-.smartart-progresstracker li {
+.sm-progresstracker > ul > li {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -52,18 +65,18 @@
   z-index: 3;
   flex: 1;
   text-align: center;
-  padding-top: 70px;
+  padding-top: calc(var(--step-size) + 20px);
   padding-left: 0;
   padding-right: 0;
   font-weight: 600;
   font-size: 14px;
-  color: #6c757d;
+  color: var(--text-color);
   width: auto;
   min-width: 80px;
 }
 
 /* Hide the actual checkbox but keep it accessible */
-.smartart-progresstracker input[type="checkbox"] {
+.sm-progresstracker > ul > li > input[type="checkbox"] {
   position: absolute;
   opacity: 0;
   cursor: pointer;
@@ -72,159 +85,168 @@
 }
 
 /* Create custom checkbox appearance with numbers */
-.smartart-progresstracker li::before {
+.sm-progresstracker > ul > li::before {
   content: '';
   position: absolute;
   top: 0;
   left: 50%;
   transform: translateX(-50%);
-  width: 50px;
-  height: 50px;
+  width: var(--step-size);
+  height: var(--step-size);
   border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
   font-weight: 600;
   font-size: 16px;
-  border: 3px solid #dee2e6;
-  background: #f8f9fa;
-  color: #6c757d;
+  border: 3px solid var(--circle-border);
+  background: var(--circle-bg);
+  color: var(--text-color);
   z-index: 3;
 }
 
 /* Step numbers inside circles */
-.smartart-progresstracker li:nth-child(1)::before { content: '1'; }
-.smartart-progresstracker li:nth-child(2)::before { content: '2'; }
-.smartart-progresstracker li:nth-child(3)::before { content: '3'; }
-.smartart-progresstracker li:nth-child(4)::before { content: '4'; }
-.smartart-progresstracker li:nth-child(5)::before { content: '5'; }
+.sm-progresstracker > ul > li:nth-child(1)::before { content: '1'; }
+.sm-progresstracker > ul > li:nth-child(2)::before { content: '2'; }
+.sm-progresstracker > ul > li:nth-child(3)::before { content: '3'; }
+.sm-progresstracker > ul > li:nth-child(4)::before { content: '4'; }
+.sm-progresstracker > ul > li:nth-child(5)::before { content: '5'; }
 
 /* Completed steps - Green with checkmark */
-.smartart-progresstracker li:has(input[type="checkbox"]:checked)::before {
+.sm-progresstracker > ul > li:has(input[type="checkbox"]:checked)::before {
   content: '✓' !important;
-  background: #28a745;
-  border-color: #28a745;
+  background: var(--completed-color);
+  border-color: var(--completed-color);
   color: white;
 }
 
-.smartart-progresstracker li:has(input[type="checkbox"]:checked) {
-  color: #28a745;
+.sm-progresstracker > ul > li:has(input[type="checkbox"]:checked) {
+  color: var(--completed-color);
 }
 
 /* Progress line logic - Calculate width based on completed checkboxes */
-.smartart-progresstracker ul:has(li:nth-child(1):has(input[type="checkbox"]:checked))::after {
+.sm-progresstracker > ul:has(> li:nth-child(1):has(input[type="checkbox"]:checked))::after {
   width: 25%;
 }
 
-.smartart-progresstracker ul:has(li:nth-child(2):has(input[type="checkbox"]:checked))::after {
+.sm-progresstracker > ul:has(> li:nth-child(2):has(input[type="checkbox"]:checked))::after {
   width: 50%;
 }
 
-.smartart-progresstracker ul:has(li:nth-child(3):has(input[type="checkbox"]:checked))::after {
+.sm-progresstracker > ul:has(> li:nth-child(3):has(input[type="checkbox"]:checked))::after {
   width: 75%;
 }
 
-.smartart-progresstracker ul:has(li:nth-child(4):has(input[type="checkbox"]:checked))::after {
+.sm-progresstracker > ul:has(> li:nth-child(4):has(input[type="checkbox"]:checked))::after {
   width: 100%;
 }
 
 /* Vertical Progress Tracker */
-.smartart-progresstracker.vertical ul {
-  flex-direction: column;
-  align-items: flex-start;
-  max-width: 300px;
-  height: 400px;
-  justify-content: space-between;
-  padding: 20px 0;
+.sm-progresstracker.vertical {
+  /* Vertical specific variables */
+  --vertical-width: 300px;
+  --vertical-height: 400px;
+
+  > ul {
+    flex-direction: column;
+    align-items: flex-start;
+    max-width: var(--vertical-width);
+    height: var(--vertical-height);
+    justify-content: space-between;
+    padding: 20px 0;
+  }
 }
 
-.smartart-progresstracker.vertical ul::before {
-  top: 10%;
-  left: 25px;
-  width: 4px;
-  height: 80%;
+.sm-progresstracker.vertical > ul::before {
+  top: calc(var(--step-size) / 2);
+  left: calc(var(--step-size) / 2);
+  width: var(--line-thickness);
+  height: calc(100% - var(--step-size));
   right: auto;
-  background: #e9ecef;
+  background: var(--line-color);
 }
 
-.smartart-progresstracker.vertical ul::after {
-  top: 10%;
-  left: 25px;
-  width: 4px;
+.sm-progresstracker.vertical > ul::after {
+  top: calc(var(--step-size) / 2);
+  left: calc(var(--step-size) / 2);
+  width: var(--line-thickness);
   height: 0;
   right: auto;
-  background: #28a745;
+  background: var(--progress-color);
 }
 
-.smartart-progresstracker.vertical li {
+.sm-progresstracker.vertical > ul > li {
   flex-direction: row;
   align-items: center;
   width: 100%;
   margin-bottom: 60px;
   padding-top: 0;
-  padding-left: 70px;
+  padding-left: calc(var(--step-size) + 20px);
   text-align: left;
 }
 
-.smartart-progresstracker.vertical li:last-child {
+.sm-progresstracker.vertical > ul > li:last-child {
   margin-bottom: 0;
 }
 
-.smartart-progresstracker.vertical li::before {
+.sm-progresstracker.vertical > ul > li::before {
   left: 0;
   transform: none;
 }
 
 /* Vertical progress line fill logic */
-.smartart-progresstracker.vertical ul:has(li:nth-child(1):has(input[type="checkbox"]:checked))::after {
+.sm-progresstracker.vertical > ul:has(> li:nth-child(1):has(input[type="checkbox"]:checked))::after {
   height: 25%;
 }
 
-.smartart-progresstracker.vertical ul:has(li:nth-child(2):has(input[type="checkbox"]:checked))::after {
+.sm-progresstracker.vertical > ul:has(> li:nth-child(2):has(input[type="checkbox"]:checked))::after {
   height: 50%;
 }
 
-.smartart-progresstracker.vertical ul:has(li:nth-child(3):has(input[type="checkbox"]:checked))::after {
+.sm-progresstracker.vertical > ul:has(> li:nth-child(3):has(input[type="checkbox"]:checked))::after {
   height: 75%;
 }
 
-.smartart-progresstracker.vertical ul:has(li:nth-child(4):has(input[type="checkbox"]:checked))::after {
+.sm-progresstracker.vertical > ul:has(> li:nth-child(4):has(input[type="checkbox"]:checked))::after {
   height: 100%;
 }
 
 /* Responsive Design */
 @media (max-width: 768px) {
-  .smartart-progresstracker ul {
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 15px;
-  }
+  .sm-progresstracker:not(.vertical) {
+    /* Mobile specific variables */
+    --step-size: 40px;
+    --mobile-spacing: 15px;
+    
+    > ul {
+      flex-direction: column;
+      align-items: flex-start;
+      gap: var(--mobile-spacing);
+    }
 
-  .smartart-progresstracker ul::before,
-  .smartart-progresstracker ul::after {
-    left: 25px;
-    top: 0;
-    bottom: 0;
-    width: 4px;
-    height: 100%;
-    right: auto;
-  }
+    > ul::before,
+    > ul::after {
+      left: calc(var(--step-size) / 2);
+      top: calc(var(--step-size) / 2);
+      bottom: calc(var(--step-size) / 2);
+      width: var(--line-thickness);
+      height: calc(100% - var(--step-size));
+      right: auto;
+    }
 
-  .smartart-progresstracker li {
-    flex-direction: row;
-    align-items: center;
-    width: 100%;
-    text-align: left;
-    padding-top: 0;
-    padding-left: 60px;
-    margin-bottom: 20px;
-  }
+    > ul > li {
+      flex-direction: row;
+      align-items: center;
+      width: 100%;
+      text-align: left;
+      padding-top: 0;
+      padding-left: calc(var(--step-size) + 20px);
+      margin-bottom: var(--mobile-spacing);
+    }
 
-  .smartart-progresstracker li::before {
-    left: 0;
-    transform: none;
-    width: 40px;
-    height: 40px;
-    font-size: 14px;
+    > ul > li::before {
+      left: 0;
+      transform: none;
+    }
   }
 }

@@ -25,11 +25,25 @@ Lists of items with headers, oriented horizontally. **[Read Stack Docs &raquo;](
 
 [![Stack Example](https://raw.githubusercontent.com/sanand0/smartart/main/docs/stack-builtin-theme.webp)](stack.md)
 
-## Themes
+## Cycle
 
-A dozen themes for a professional look. **[Read Themes Docs &raquo;](themes.md)**
+Circular flow diagrams for cyclical processes
 
-[![Themes Example](https://raw.githubusercontent.com/sanand0/smartart/main/docs/chevron-builtin-theme.webp)](themes.md)
+## Pyramid
+
+Hierarchical structures and organizational charts. **[Read Pyramid Docs &raquo;](pyramid.md)**
+
+[![Pyramid Example](https://raw.githubusercontent.com/sanand0/smartart/main/docs/pyramid-basic.webp)](pyramid.md)
+
+## Progress Tracker
+
+Visual indicators for tracking progress through steps. **[Read Progress Tracker Docs &raquo;](progresstracker.md)**
+
+[![Progress Tracker Example](https://raw.githubusercontent.com/sanand0/smartart/main/docs/progresstracker-basic.webp)](progresstracker.md)
+
+## Funnel
+
+Process flows showing narrowing stages
 
 ## Development
 
