@@ -116,45 +116,4 @@
   }
 }
 
-/* Alternative color schemes */
 
-/* Dark theme - Rich deep blues with subtle gradient */
-.smartart-pyramid.dark-theme {
-  --pyramid-level-1-color: #1e3a8a; /* Deep navy blue */
-  --pyramid-level-2-color: #2563eb; /* Royal blue */
-  --pyramid-level-3-color: #3b82f6; /* Bright blue */
-  --pyramid-level-4-color: #60a5fa; /* Sky blue */
-  --pyramid-level-5-color: #93c5fd; /* Light blue */
-  --pyramid-text-color: #ffffff;
-}
-
-/* Professional theme - Elegant teal to green gradient */
-.smartart-pyramid.professional-theme {
-  --pyramid-level-1-color: #0d9488; /* Deep teal */
-  --pyramid-level-2-color: #14b8a6; /* Teal */
-  --pyramid-level-3-color: #2dd4bf; /* Light teal */
-  --pyramid-level-4-color: #34d399; /* Emerald */
-  --pyramid-level-5-color: #6ee7b7; /* Light green */
-  --pyramid-text-color: #ffffff;
-}
-
-/* Warm theme - Vibrant sunset gradient */
-.smartart-pyramid.warm-theme {
-  --pyramid-level-1-color: #9d174d; /* Deep magenta */
-  --pyramid-level-2-color: #dc2626; /* Red */
-  --pyramid-level-3-color: #ea580c; /* Orange */
-  --pyramid-level-4-color: #d97706; /* Amber */
-  --pyramid-level-5-color: #fbbf24; /* Yellow */
-  --pyramid-text-color: #ffffff;
-}
-
-/* Monochrome theme - Indigo blue gradient with subtle variations */
-.smartart-pyramid.monochrome-theme {
-  --pyramid-level-1-color: #312e81; /* Deep indigo */
-  --pyramid-level-2-color: #4338ca; /* Indigo */
-  --pyramid-level-3-color: #4f46e5; /* Medium indigo */
-  --pyramid-level-4-color: #6366f1; /* Light indigo */
-  --pyramid-level-5-color: #818cf8; /* Pale indigo */
-  --pyramid-text-color: #ffffff;
-  --pyramid-font-weight: 600;
-}
