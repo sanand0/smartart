@@ -24,173 +24,265 @@ npm install smartart
 
 ### Basic Example
 
-Create a column flow with semantic HTML:
+Create a column flow with HTML:
 
-```html
-<ul class="smartart-column">
-  <li>
-    <h3 style="--column-bg-color: red">Planning</h3>
-    <ul>
-      <li>Define requirements</li>
-      <li>Create timeline</li>
-      <li>Assign resources</li>
-    </ul>
-  </li>
-  <li>
-    <h3>Development</h3>
-    <ul>
-      <li>Write code</li>
-      <li>Code review</li>
-      <li>Unit testing</li>
-    </ul>
-  </li>
-  <li>
-    <h3>Testing</h3>
-    <ul>
-      <li>Integration tests</li>
-      <li>User acceptance</li>
-      <li>Performance tests</li>
-    </ul>
-  </li>
-  <li>
-    <h3>Deployment</h3>
-    <ul>
-      <li>Production release</li>
-      <li>Monitor systems</li>
-      <li>User training</li>
-    </ul>
-  </li>
-</ul>
+![Basic Column Example](https://raw.githubusercontent.com/sanand0/smartart/main/docs/column-basic.webp ":skip")
+
+```html :example="column-basic.webp"
+<div class="sm-column">
+  <ul>
+    <li>
+      <strong>Planning</strong>
+      <ul>
+        <li>Define requirements</li>
+        <li>Create timeline</li>
+        <li>Assign resources</li>
+      </ul>
+    </li>
+    <li>
+      <strong>Development</strong>
+      <ul>
+        <li>Write code</li>
+        <li>Code review</li>
+        <li>Unit testing</li>
+      </ul>
+    </li>
+    <li>
+      <strong>Testing</strong>
+      <ul>
+        <li>Integration tests</li>
+        <li>User acceptance</li>
+        <li>Performance tests</li>
+      </ul>
+    </li>
+    <li>
+      <strong>Deployment</strong>
+      <ul>
+        <li>Production release</li>
+        <li>Monitor systems</li>
+        <li>User training</li>
+      </ul>
+    </li>
+  </ul>
+</div>
 ```
 
-[![Basic Column Example](https://raw.githubusercontent.com/sanand0/smartart/main/docs/column-basic.webp)](docs/column-basic.html ":include height=300px")
+... or by converting this Markdown to HTML:
 
-[See the Basic example](docs/column-basic.html ":ignore")
+```markdown :example="column-basic.webp"
+<div class="sm-column">
 
-### Minimal Example
+- **Planning**
+  - Define requirements
+  - Create timeline
+  - Assign resources
+- **Development**
+  - Write code
+  - Code review
+  - Unit testing
+- **Testing**
+  - Integration tests
+  - User acceptance
+  - Performance tests
+- **Deployment**
+  - Production release
+  - Monitor systems
+  - User training
+
+</div>
+```
+
+### Headings Only
+
+![Headings Only Example](https://raw.githubusercontent.com/sanand0/smartart/main/docs/column-headings.webp ":skip")
+
+```markdown :example="column-headings.webp"
+<div class="sm-column">
+
+- **Planning**
+- **Development**
+- **Testing**
+- **Deployment**
+
+</div>
+```
 
 For simple step indicators without detailed content, add any element inside each `<li>`. You can use any HTML tag for the column text, e.g. `<h3>`, `<div>`, `<strong>`.
 
-```html
-<ul class="smartart-column">
-  <li><div>Step 1</div></li>
-  <li><div>Step 2</div></li>
-  <li><div>Step 3</div></li>
-</ul>
+### Single Column
+
+For standalone elements:
+
+![Single Column Example](https://raw.githubusercontent.com/sanand0/smartart/main/docs/column-single.webp ":skip")
+
+```markdown :example="column-single.webp"
+<div class="sm-column">
+
+- **Important Notice**
+  - Read all instructions
+  - Complete forms
+
+</div>
 ```
 
-[![Minimal Column Example](https://raw.githubusercontent.com/sanand0/smartart/main/docs/column-minimal.webp)](docs/column-minimal.html ":include height=200px")
+### Custom Content
 
-[See the Minimal example](docs/column-minimal.html ":ignore")
+![Custom Content Column Example](https://raw.githubusercontent.com/sanand0/smartart/main/docs/column-custom.webp ":skip")
+
+```markdown :example="column-custom.webp" :quality=20
+<div class="sm-column">
+
+- **Alpha**
+  ![pic](https://picsum.photos/id/11/200/100.jpg)
+  ![pic](https://picsum.photos/id/12/200/100.jpg)
+- **Beta**
+  ![pic](https://picsum.photos/id/21/200/100.jpg)
+  ![pic](https://picsum.photos/id/22/200/100.jpg)
+- **Gamma**
+  ![pic](https://picsum.photos/id/31/200/100.jpg)
+  ![pic](https://picsum.photos/id/32/200/100.jpg)
+
+</div>
+```
 
 ### Long Text Wrapping
 
-The library automatically handles text wrapping:
+The library handles text wrapping:
 
-```html
-<ul class="smartart-column">
-  <li>
-    <p>Initial Phase with Very Long Description That Will Wrap</p>
-    <ul>
-      <li>This is a very long list item that demonstrates how the library handles text wrapping automatically</li>
-      <li>Short item</li>
-    </ul>
-  </li>
-  <li>
-    <p>Next Phase</p>
-    <ul>
-      <li>Regular content</li>
-    </ul>
-  </li>
-</ul>
+![Long Text Column Example](https://raw.githubusercontent.com/sanand0/smartart/main/docs/column-long-text.webp ":skip")
+
+```markdown :example="column-long-text.webp"
+<div class="sm-column">
+
+- **Phase with Long Wrapping Text**
+  - This is a very long list item that demonstrates how the library handles text wrapping automatically
+  - Short item
+- **Next Phase**
+  - Regular content
+
+</div>
 ```
-
-[![Long Text Column Example](https://raw.githubusercontent.com/sanand0/smartart/main/docs/column-long-text.webp)](docs/column-long-text.html ":include height=250px")
-
-[See the Long text example](docs/column-long-text.html ":ignore")
 
 ### Custom Styling
 
 Customize the appearance using CSS custom properties:
 
-| Variable                   | Default   | Description                 |
-| -------------------------- | --------- | --------------------------- |
-| `--column-width`           | `200px`   | Width of each column header |
-| `--column-height`          | `60px`    | Height of column headers    |
-| `--column-gap`             | `15px`    | Gap between sections        |
-| `--column-bg-color`        | `#e0e0e0` | Header background color     |
-| `--column-text-indent`     | `10px`    | Text indent for content box |
-| `--column-content-padding` | `15px`    | Content box padding         |
-
-### Default Theme
-
-The standard appearance with clean, professional styling:
-
-[![Default Theme](https://raw.githubusercontent.com/sanand0/smartart/main/docs/column-default.webp)](docs/column-default.html ":include height=300px")
-
-[See the Default theme example](docs/column-default.html ":ignore")
+| Variable   | Default        | Description                 |
+| ---------- | -------------- | --------------------------- |
+| `--width`  | `200px`        | Width of each column header |
+| `--height` | `60px`         | Height of column headers    |
+| `--gap`    | `20px`         | Gap between sections        |
+| `--bg`     | `#e0e0e0`      | Header background color     |
+| `--fg`     | `#000`         | Header foreground color     |
+| `--bg-alt` | `transparent`  | Content background color    |
+| `--fg-alt` | `currentColor` | Content foreground color    |
 
 ### Dark Theme
 
-```css
-:root {
-  --column-bg-color: #31506f;
-}
-.smartart-column > li > ul {
-  background-color: #34495e;
-  color: #ecf0f1;
-}
+![Dark Theme](https://raw.githubusercontent.com/sanand0/smartart/main/docs/column-dark-theme.webp ":skip")
+
+```markdown :example="column-dark-theme.webp"
+<div class="sm-column" style="--bg: #31506f; --fg: #ecf0f1; --bg-alt: #34495e">
+
+- **Planning**
+  - Define requirements
+  - Create timeline
+  - Assign resources
+- **Development**
+  - Write code
+  - Code review
+  - Unit testing
+- **Testing**
+  - Integration tests
+  - User acceptance
+  - Performance tests
+- **Deployment**
+  - Production release
+  - Monitor systems
+  - User training
+
+</div>
 ```
 
-[![Dark Theme](https://raw.githubusercontent.com/sanand0/smartart/main/docs/column-dark-theme.webp)](docs/column-dark-theme.html ":include height=300px")
+### Builtin Themes
 
-[See the Dark theme example](docs/column-dark-theme.html ":ignore")
+Add any of the `sm-theme-*` classes available in [themes](themes.md). For example, `sm-theme-office`.
 
-### Colorful Theme
+![Builtin Theme](https://raw.githubusercontent.com/sanand0/smartart/main/docs/column-builtin-theme.webp ":skip")
 
-```css
-.smartart-column > li:nth-child(1) > div {
-  --column-bg-color: #e74c3c;
-}
-.smartart-column > li:nth-child(2) > div {
-  --column-bg-color: #f39c12;
-}
-.smartart-column > li:nth-child(3) > div {
-  --column-bg-color: #27ae60;
-}
-.smartart-column > li:nth-child(4) > div {
-  --column-bg-color: #3498db;
-}
+```markdown :example="column-builtin-theme.webp"
+<div class="sm-column sm-theme-office">
+
+- **Planning**
+  - Define requirements
+  - Create timeline
+  - Assign resources
+- **Development**
+  - Write code
+  - Code review
+  - Unit testing
+- **Testing**
+  - Integration tests
+  - User acceptance
+  - Performance tests
+- **Deployment**
+  - Production release
+  - Monitor systems
+  - User training
+
+</div>
 ```
-
-[![Colorful Theme](https://raw.githubusercontent.com/sanand0/smartart/main/docs/column-colorful.webp)](docs/column-colorful.html ":include height=300px")
-
-[See the Colorful theme example](docs/column-colorful.html ":ignore")
 
 ### Compact Size
 
-```css
-:root {
-  --column-width: 150px;
-  --column-height: 40px;
-  --column-gap: 10px;
-}
+![Compact Size](https://raw.githubusercontent.com/sanand0/smartart/main/docs/column-compact-size.webp ":skip")
+
+```markdown :example="column-compact-size.webp"
+<div class="sm-column" style="--width: 150px; --height: 40px; --gap: 5px">
+
+- **Planning**
+  - Define requirements
+  - Create timeline
+  - Assign resources
+- **Development**
+  - Write code
+  - Code review
+  - Unit testing
+- **Testing**
+  - Integration tests
+  - User acceptance
+  - Performance tests
+- **Deployment**
+  - Production release
+  - Monitor systems
+  - User training
+
+</div>
 ```
-
-[![Compact Size](https://raw.githubusercontent.com/sanand0/smartart/main/docs/column-compact.webp)](docs/column-compact.html ":include height=250px")
-
-[See the Compact size example](docs/column-compact.html ":ignore")
 
 ### Large Size
 
-```css
-:root {
-  --column-width: 300px;
-  --column-height: 100px;
-  --column-gap: 20px;
-}
+![Large Size](https://raw.githubusercontent.com/sanand0/smartart/main/docs/column-large-size.webp ":skip")
+
+```markdown :example="column-large-size.webp"
+<div class="sm-column" style="--width: 300px; --height: 100px; --gap: 30px">
+
+- **Planning**
+  - Define requirements
+  - Create timeline
+  - Assign resources
+- **Development**
+  - Write code
+  - Code review
+  - Unit testing
+- **Testing**
+  - Integration tests
+  - User acceptance
+  - Performance tests
+- **Deployment**
+  - Production release
+  - Monitor systems
+  - User training
+
+</div>
 ```
-
-[![Large Size](https://raw.githubusercontent.com/sanand0/smartart/main/docs/column-large.webp)](docs/column-large.html ":include height=400px")
-
-[See the Large size example](docs/column-large.html ":ignore")

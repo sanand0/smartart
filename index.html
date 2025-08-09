@@ -1,26 +1,36 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 
 <head>
-  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <meta charset="UTF-8" />
   <title>smartart library</title>
-  <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/docsify@4/themes/vue.css" />
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAzMiAzMiI+PGNpcmNsZSBjeD0iMTYiIGN5PSIxNiIgcj0iMTUiIGZpbGw9IiMyNTYzZWIiLz48cGF0aCBmaWxsPSIjZmZmIiBkPSJtMTYgNyAyIDcgNyAyLTcgMi0yIDctMi03LTctMiA3LTJaIi8+PC9zdmc+" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/docsify@^5.0.0-rc/dist/themes/core.min.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/docsify@^5.0.0-rc/dist/themes/addons/core-dark.min.css" />
+  <link rel="stylesheet" href="chevron.css" />
+  <link rel="stylesheet" href="column.css" />
+  <link rel="stylesheet" href="stack.css" />
+  <link rel="stylesheet" href="themes.css" />
+
+  <style>
+    :root {
+      --content-max-width: 900px;
+    }
+
+    /* Prevent Docsify CSS from interfering with .stack positioning */
+    :is(.markdown-section .sm-stack ul) {
+      margin-top: 0 !important;
+    }
+
+  </style>
 </head>
 
-<body>
+<body class="loading sidebar-chevron-right sidebar-group-box">
   <div id="app"></div>
-  <script type="module">
-    window.$docsify = {
-      auto2top: true,
-      name: 'smartart',
-      themeColor: 'red',
-    };
-
-  </script>
-  <script src="//cdn.jsdelivr.net/npm/docsify@4" type="module"></script>
-  <script src="//cdn.jsdelivr.net/npm/docsify-copy-code/dist/docsify-copy-code.min.js" type="module"></script>
+  <script src="script.js" type="module"></script>
+  <script src="https://cdn.jsdelivr.net/npm/docsify@^5.0.0-rc"></script>
+  <script src="https://cdn.jsdelivr.net/npm/docsify-copy-code@2"></script>
 </body>
 
 </html>

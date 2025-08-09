@@ -25,55 +25,27 @@ npm install smartart
 To use a theme, add the theme class to your smartart element. For example:
 
 ```html
-<ul class="smartart-chevron smartart-theme-office" style="--chevron-width: 150px">
-  ...
-</ul>
+<div class="sm-chevron sm-theme-office">...</div>
 ```
 
-### Office
+Available themes:
 
-[![Office Theme](docs/theme-office.webp)](docs/theme-office.html ":include height=300px")
+- `sm-theme-office`: Office (corporate, pro)
+- `sm-theme-okabe-ito`: Okabe–Ito (colorblind-safe, pro)
+- `sm-theme-material`: Material (Google-ish, vibrant but balanced)
+- `sm-theme-tableau`: Tableau Classic (corporate, legible on slides)
+- `sm-theme-solarized`: Solarized Accents (calm, consistent luminance)
+- `sm-theme-ocean`: Ocean (cool, modern dashboards)
+- `sm-theme-forest`: Forest/Earth (grounded, exec decks)
+- `sm-theme-pastel`: Pastel (soft, low-ink handouts)
+- `sm-theme-mono`: Monochrome (sleek, focus on structure)
+- `sm-theme-neon`: High-Contrast Neon (for dark UIs & posters)
 
-### Grayscale
+[![Themes](docs/themes.webp)](docs/themes.html ":include height=600px")
 
-[![Grayscale Theme](docs/theme-grayscale.webp)](docs/theme-grayscale.html ":include height=300px")
+Each theme defines 6 series of 4 variables:
 
-### Blue Warm
-
-[![Blue Warm Theme](docs/theme-blue-warm.webp)](docs/theme-blue-warm.html ":include height=300px")
-
-### Blue II
-
-[![Blue II Theme](docs/theme-blue-ii.webp)](docs/theme-blue-ii.html ":include height=300px")
-
-### Tableau
-
-[![Tableau Theme](docs/theme-tableau.webp)](docs/theme-tableau.html ":include height=300px")
-
-### D3
-
-[![D3 Theme](docs/theme-d3.webp)](docs/theme-d3.html ":include height=300px")
-
-### Colorblind Safe
-
-[![Colorblind Safe Theme](docs/theme-colorblind-safe.webp)](docs/theme-colorblind-safe.html ":include height=300px")
-
-### Viridis
-
-[![Viridis Theme](docs/theme-viridis.webp)](docs/theme-viridis.html ":include height=300px")
-
-### Monokai
-
-[![Monokai Theme](docs/theme-monokai.webp)](docs/theme-monokai.html ":include height=300px")
-
-### Solarized Light
-
-[![Solarized Light Theme](docs/theme-solarized-light.webp)](docs/theme-solarized-light.html ":include height=300px")
-
-### Solarized Dark
-
-[![Solarized Dark Theme](docs/theme-solarized-dark.webp)](docs/theme-solarized-dark.html ":include height=300px")
-
-### Dracula
-
-[![Dracula Theme](docs/theme-dracula.webp)](docs/theme-dracula.html ":include height=300px")
+- `--bg-1`, `bg-2`, ... `bg-6`: Primary background colors.
+- `--fg-1`, `fg-2`, ... `fg-6`: Primary text colors
+- `--bg-alt-1`, `bg-alt-2`, ... `bg-alt-6`: Alternate background colors
+- `--fg-alt-1`, `fg-alt-2`, ... `fg-alt-6`: Alternate text colors
