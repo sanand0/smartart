@@ -1,37 +1,35 @@
-/* Column Smart Art CSS Library */
+/* Stack Smart Art CSS Library */
 
 /* Main container */
-.sm-column {
-  --width: 200px; /* Width of each header */
-  --height: 60px; /* Height of headers */
+.sm-stack {
+  --width: 600px; /* Width of the smartart */
+  --header-width: 200px; /* Width of each header */
   --gap: 15px; /* Gap between items */
   --bg: #e0e0e0; /* Header background color */
   --fg: #000; /* Header foreground color */
   --bg-alt: transparent; /* COntent background color */
   --fg-alt: currentColor; /* Content foreground color */
 
-
   > ul,
   > ol {
     list-style: none; /* Remove default list styling */
-    display: flex; /* Horizontal layout for items */
-    align-items: stretch; /* Make all items same height */
+    display: flex; /* Vertical layout for items */
+    flex-direction: column;
     margin: 0 auto; /* Center the list */
-    gap: var(--gap);
+    gap: var(--gap); /* Gap between items */
+    width: var(--width);
 
     /* Each item (contains header and content ul) */
     > li {
-      display: flex; /* Vertical layout for header and content */
-      flex-direction: column;
+      display: flex; /* Horizontal layout for header and content */
+      flex-direction: row;
       position: relative; /* For z-index stacking */
       flex: 0 0 auto; /* Don't grow/shrink, use natural size */
-
 
       /* Header shapes (header inside li) */
       > :first-child {
         /* Dimensions */
-        width: var(--width);
-        height: var(--height);
+        width: var(--header-width);
 
         /* Styling */
         background-color: var(--bg);
@@ -56,16 +54,14 @@
         background-color: var(--bg-alt);
         color: var(--fg-alt);
 
-        flex: 1; /* Expand to fill remaining height */
+        /* Layout */
+        flex: 1; /* Expand to fill remaining width */
         position: relative;
         z-index: 1; /* Below headers */
         display: flex;
         flex-direction: column;
         justify-content: flex-start;
-
-        /* Dimensions and positioning */
-        width: var(--width);
-      }
+     }
     }
   }
 }

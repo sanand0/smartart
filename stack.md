@@ -1,11 +1,11 @@
-# Chevron
+# Stack
 
 ## Installation
 
 From CDN:
 
 ```html
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/smartart@1/dist/chevron.min.css" />
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/smartart@1/dist/stack.min.css" />
 ```
 
 Using npm:
@@ -17,19 +17,19 @@ npm install smartart
 ... then import in your CSS:
 
 ```css
-@import "node_modules/smartart/dist/chevron.min.css";
+@import "node_modules/smartart/dist/stack.min.css";
 ```
 
 ## Usage
 
 ### Basic Example
 
-Create a chevron flow with HTML:
+Create a stack flow with HTML:
 
-![Basic Chevron Example](https://raw.githubusercontent.com/sanand0/smartart/main/docs/chevron-basic.webp ":skip")
+![Basic Stack Example](https://raw.githubusercontent.com/sanand0/smartart/main/docs/stack-basic.webp ":skip")
 
-```html :example="chevron-basic.webp"
-<div class="sm-chevron">
+```html :example="stack-basic.webp"
+<div class="sm-stack">
   <ul>
     <li>
       <strong>Planning</strong>
@@ -69,8 +69,8 @@ Create a chevron flow with HTML:
 
 ... or by converting this Markdown to HTML:
 
-```markdown :example="chevron-basic.webp"
-<div class="sm-chevron">
+```markdown :example="stack-basic.webp"
+<div class="sm-stack">
 
 - **Planning**
   - Define requirements
@@ -94,10 +94,10 @@ Create a chevron flow with HTML:
 
 ### Headings Only
 
-![Headings Only Example](https://raw.githubusercontent.com/sanand0/smartart/main/docs/chevron-headings.webp ":skip")
+![Headings Only Example](https://raw.githubusercontent.com/sanand0/smartart/main/docs/stack-headings.webp ":skip")
 
-```markdown :example="chevron-headings.webp"
-<div class="sm-chevron">
+```markdown :example="stack-headings.webp"
+<div class="sm-stack">
 
 - **Planning**
 - **Development**
@@ -107,16 +107,16 @@ Create a chevron flow with HTML:
 </div>
 ```
 
-For simple step indicators without detailed content, add any element inside each `<li>`. You can use any HTML tag for the chevron text, e.g. `<h3>`, `<div>`, `<strong>`.
+For simple step indicators without detailed content, add any element inside each `<li>`. You can use any HTML tag for the stack text, e.g. `<h3>`, `<div>`, `<strong>`.
 
-### Single Chevron
+### Single Stack
 
 For standalone elements:
 
-![Single Chevron Example](https://raw.githubusercontent.com/sanand0/smartart/main/docs/chevron-single.webp ":skip")
+![Single Stack Example](https://raw.githubusercontent.com/sanand0/smartart/main/docs/stack-single.webp ":skip")
 
-```markdown :example="chevron-single.webp"
-<div class="sm-chevron">
+```markdown :example="stack-single.webp"
+<div class="sm-stack">
 
 - **Important Notice**
   - Read all instructions
@@ -127,10 +127,10 @@ For standalone elements:
 
 ### Custom Content
 
-![Custom Content Chevron Example](https://raw.githubusercontent.com/sanand0/smartart/main/docs/chevron-custom.webp ":skip")
+![Custom Content Stack Example](https://raw.githubusercontent.com/sanand0/smartart/main/docs/stack-custom.webp ":skip")
 
-```markdown :example="chevron-custom.webp" :quality=20
-<div class="sm-chevron">
+```markdown :example="stack-custom.webp" :quality=20
+<div class="sm-stack">
 
 - **Alpha**
   ![pic](https://picsum.photos/id/11/200/100.jpg)
@@ -149,10 +149,10 @@ For standalone elements:
 
 The library handles text wrapping:
 
-![Long Text Chevron Example](https://raw.githubusercontent.com/sanand0/smartart/main/docs/chevron-long-text.webp ":skip")
+![Long Text Stack Example](https://raw.githubusercontent.com/sanand0/smartart/main/docs/stack-long-text.webp ":skip")
 
-```markdown :example="chevron-long-text.webp"
-<div class="sm-chevron">
+```markdown :example="stack-long-text.webp"
+<div class="sm-stack">
 
 - **Phase with Long Wrapping Text**
   - This is a very long list item that demonstrates how the library handles text wrapping automatically
@@ -167,25 +167,22 @@ The library handles text wrapping:
 
 Customize the appearance using CSS custom properties:
 
-| Variable      | Default        | Description                  |
-| ------------- | -------------- | ---------------------------- |
-| `--width`     | `200px`        | Width of each chevron header |
-| `--height`    | `60px`         | Height of chevron headers    |
-| `--tip-width` | `30px`         | Width of pointed tips        |
-| `--gap`       | `20px`         | Gap between sections         |
-| `--bg`        | `#e0e0e0`      | Header background color      |
-| `--fg`        | `#000`         | Header foreground color      |
-| `--bg-alt`    | `transparent`  | Content background color     |
-| `--fg-alt`    | `currentColor` | Content foreground color     |
+| Variable         | Default        | Description              |
+| ---------------- | -------------- | ------------------------ |
+| `--width`        | `600px`        | Width of each stack      |
+| `--header-width` | `200px`        | Width of stack headers   |
+| `--gap`          | `20px`         | Gap between sections     |
+| `--bg`           | `#e0e0e0`      | Header background color  |
+| `--fg`           | `#000`         | Header foreground color  |
+| `--bg-alt`       | `transparent`  | Content background color |
+| `--fg-alt`       | `currentColor` | Content foreground color |
 
-### Builtin Themes
+### Dark Theme
 
-Add any of the `sm-theme-*` classes available in [themes](themes.md). For example, `sm-theme-office`.
+![Dark Theme](https://raw.githubusercontent.com/sanand0/smartart/main/docs/stack-dark-theme.webp ":skip")
 
-![Builtin Theme](https://raw.githubusercontent.com/sanand0/smartart/main/docs/chevron-builtin-theme.webp ":skip")
-
-```markdown :example="chevron-builtin-theme.webp"
-<div class="sm-chevron sm-theme-office">
+```markdown :example="stack-dark-theme.webp"
+<div class="sm-stack" style="--bg: #31506f; --fg: #ecf0f1; --bg-alt: #34495e">
 
 - **Planning**
   - Define requirements
@@ -207,12 +204,14 @@ Add any of the `sm-theme-*` classes available in [themes](themes.md). For exampl
 </div>
 ```
 
-### Dark Theme
+### Builtin Themes
 
-![Dark Theme](https://raw.githubusercontent.com/sanand0/smartart/main/docs/chevron-dark-theme.webp ":skip")
+Add any of the `sm-theme-*` classes available in [themes](themes.md). For example, `sm-theme-office`.
 
-```markdown :example="chevron-dark-theme.webp"
-<div class="sm-chevron" style="--bg: #31506f; --fg: #ecf0f1; --bg-alt: #34495e">
+![Builtin Theme](https://raw.githubusercontent.com/sanand0/smartart/main/docs/stack-builtin-theme.webp ":skip")
+
+```markdown :example="stack-builtin-theme.webp"
+<div class="sm-stack sm-theme-office">
 
 - **Planning**
   - Define requirements
@@ -236,10 +235,10 @@ Add any of the `sm-theme-*` classes available in [themes](themes.md). For exampl
 
 ### Compact Size
 
-![Compact Size](https://raw.githubusercontent.com/sanand0/smartart/main/docs/chevron-compact-size.webp ":skip")
+![Compact Size](https://raw.githubusercontent.com/sanand0/smartart/main/docs/stack-compact-size.webp ":skip")
 
-```markdown :example="chevron-compact-size.webp"
-<div class="sm-chevron" style="--width: 150px; --height: 40px; --tip-width: 20px; --gap: 5px">
+```markdown :example="stack-compact-size.webp"
+<div class="sm-stack" style="--width: 300px; --header-width: 100px; --gap: 5px">
 
 - **Planning**
   - Define requirements
@@ -263,10 +262,10 @@ Add any of the `sm-theme-*` classes available in [themes](themes.md). For exampl
 
 ### Large Size
 
-![Large Size](https://raw.githubusercontent.com/sanand0/smartart/main/docs/chevron-large-size.webp ":skip")
+![Large Size](https://raw.githubusercontent.com/sanand0/smartart/main/docs/stack-large-size.webp ":skip")
 
-```markdown :example="chevron-large-size.webp"
-<div class="sm-chevron" style="--width: 300px; --height: 100px; --tip-width: 50px; --gap: 30px">
+```markdown :example="stack-large-size.webp"
+<div class="sm-stack" style="--width: 800px; --header-width: 300px; --gap: 30px">
 
 - **Planning**
   - Define requirements

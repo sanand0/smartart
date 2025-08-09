@@ -1,66 +1,59 @@
 import { chromium } from "playwright";
 import { default as sharp } from "sharp";
 import { default as path } from "path";
-import { default as fs } from "fs";
 import { fileURLToPath } from "url";
+import { spawn } from "child_process";
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 
-// Automatically discover all HTML files in docs/ directory
-function getHtmlFiles() {
-  const docsDir = path.join(__dirname, "docs");
-  return fs
-    .readdirSync(docsDir)
-    .filter((file) => file.endsWith(".html"))
-    .map((file) => path.basename(file, ".html"));
-}
-
-const examples = getHtmlFiles();
+// URLs to visit in the docsify site
+const routes = [
+  { hash: "", name: "home" },
+  { hash: "#/chevron", name: "chevron" },
+  { hash: "#/column", name: "column" },
+  { hash: "#/stack", name: "stack" },
+  { hash: "#/themes", name: "themes" },
+];
 
 (async () => {
+  // Start HTTP server
+  const serverProcess = spawn("python", ["-m", "http.server", "3000"], { cwd: __dirname, stdio: "inherit" });
+
   const browser = await chromium.launch();
   const page = await browser.newPage();
+  await page.setViewportSize({ width: 1600, height: 600 });
 
-  // Set viewport to 800px width as requested
-  await page.setViewportSize({ width: 800, height: 600 });
+  try {
+    for (const { hash, name } of routes) {
+      console.log(`Processing ${name} page...`);
 
-  for (const example of examples) {
-    const source = path.resolve(__dirname, "docs", `${example}.html`);
-    const target = `docs/${example}.webp`;
-    if (fs.existsSync(target) && fs.statSync(source).mtime <= fs.statSync(target).mtime) continue;
+      const pageUrl = `http://localhost:3000/${hash}`;
+      console.log(`Navigating to: ${pageUrl}`);
 
-    console.log(`Generating screenshot for ${example}...`);
+      // Navigate to the docsify page
+      await page.goto(pageUrl, { waitUntil: "domcontentloaded", timeout: 30000 });
+      await page.waitForSelector(".markdown-section", { timeout: 30000 });
 
-    // Navigate to the HTML file
-    await page.goto(`file://${source}`);
-
-    // Wait for the page to load
-    await page.waitForLoadState("networkidle");
-
-    // Take screenshot as PNG buffer
-    const screenshot = await page.screenshot({
-      type: "png",
-      fullPage: false,
-      clip: {
-        x: 0,
-        y: 0,
-        width: 800,
-        height: 400, // Reasonable height for examples
-      },
-    });
-
-    // Convert to lossless WebP using Sharp
-    await sharp(screenshot)
-      .webp({
-        lossless: true, // Lossless compression as requested
-        quality: 100, // Maximum quality for lossless
-        effort: 6, // Maximum compression effort
-      })
-      .toFile(target);
-
-    console.log(`✓ Generated docs/${example}.webp (lossless)`);
+      // Find all rendered examples after Docsify loads
+      const elements = await page.$$(".markdown-section [data-example]");
+      if (!elements.length) continue;
+      for (const element of elements) {
+        const filename = await element.getAttribute("data-example");
+        if (!filename) continue;
+        const target = `docs/${filename}`;
+        const screenshot = await element.screenshot({ type: "png" });
+        const quality = await element.getAttribute("data-quality");
+        const options = quality ? { quality: +quality, effort: 6 } : { lossless: true, quality: 100, effort: 6 };
+        await sharp(screenshot).webp(options).toFile(target);
+        console.log(target);
+      }
+    }
+  } finally {
+    await browser.close();
+    serverProcess.kill();
+    // Give server time to clean up
+    await new Promise((resolve) => setTimeout(resolve, 1000));
   }
 
-  await browser.close();
-  console.log("All screenshots generated successfully with lossless WebP compression!");
+  console.log("Screenshots generated!");
 })();

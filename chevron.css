@@ -1,124 +1,121 @@
 /* Chevron Smart Art CSS Library */
-/* CSS Variables - All customizable parameters */
-:root {
-  /* Dimensions */
-  --chevron-width: 200px; /* Width of each chevron header */
-  --chevron-height: 60px; /* Height of chevron headers */
-  --chevron-tip-width: 30px; /* Width of pointed tips on chevrons */
-  --chevron-gap: 15px; /* Negative margin for chevron overlap */
 
-  /* Colors */
-  --chevron-bg-color: #e0e0e0; /* Header background color */
+/* Main container */
+.sm-chevron {
+  --width: 200px; /* Width of each header */
+  --height: 60px; /* Height of headers */
+  --gap: 15px; /* Gap between items */
+  --bg: #e0e0e0; /* Header background color */
+  --fg: #000; /* Header foreground color */
+  --bg-alt: transparent; /* COntent background color */
+  --fg-alt: currentColor; /* Content foreground color */
+  --tip-width: 30px; /* Width of pointed tips on chevrons */
 
-  /* Spacing */
-  --chevron-text-indent: 10px; /* Text indent for headers */
-  --chevron-content-padding: 15px; /* Content box padding */
-}
+  > ul,
+  > ol {
+    list-style: none; /* Remove default list styling */
+    display: flex; /* Horizontal layout for items */
+    align-items: stretch; /* Make all items same height */
+    margin: 0 auto; /* Center the list */
+    gap: var(--gap);
 
-/* Main chevron list container */
-.smartart-chevron {
-  list-style: none; /* Remove default list styling */
-  display: flex; /* Horizontal layout for chevron items */
-  align-items: stretch; /* Make all items same height */
-  margin: 0 auto; /* Center the chevron list */
-
-  /* Each chevron item (contains header and content ul) */
-  > li {
-    display: flex; /* Vertical layout for header and content */
-    flex-direction: column;
-    position: relative; /* For z-index stacking */
-    flex: 0 0 auto; /* Don't grow/shrink, use natural size */
-
-    /* Chevron header shapes (header inside li) */
-    > :first-child {
-      /* Dimensions */
-      width: var(--chevron-width);
-      height: var(--chevron-height);
-
-      /* Styling */
-      background-color: var(--chevron-bg-color);
-
-      /* Layout */
-      display: flex;
-      align-items: center; /* Center text vertically */
-      justify-content: center; /* Center text horizontally */
-      position: relative;
-      z-index: 2; /* Above content boxes for proper overlap */
-
-      /* Spacing */
-      padding-left: calc(var(--chevron-tip-width)); /* text appears only after gap for tip */
-      padding-right: calc(var(--chevron-tip-width)); /* text ends at BEGINNING of end tip triangle */
-      margin-right: calc(var(--chevron-gap) - var(--chevron-tip-width)); /* Extra (or negative) gap between chevrons */
-
-      /* Create chevron shape with both left and right arrows */
-      clip-path: polygon(
-        0 0,
-        /* Top left */ calc(100% - var(--chevron-tip-width)) 0,
-        /* Top right before tip */ 100% 50%,
-        /* Right tip point */ calc(100% - var(--chevron-tip-width)) 100%,
-        /* Bottom right before tip */ 0 100%,
-        /* Bottom left */ var(--chevron-tip-width) 50% /* Left tip point */
-      );
-    }
-
-    /* Content boxes (ul inside li) */
-    > ul {
-      list-style: initial;
-
-      /* Layout */
-      padding: var(--chevron-content-padding) var(--chevron-content-padding) var(--chevron-content-padding) calc(var(--chevron-content-padding) + var(--chevron-text-indent));
-      flex: 1; /* Expand to fill remaining height */
-      position: relative;
-      z-index: 1; /* Below chevron headers */
-      display: flex;
+    /* Each item (contains header and content ul) */
+    > li {
+      display: flex; /* Vertical layout for header and content */
       flex-direction: column;
-      justify-content: flex-start;
+      position: relative; /* For z-index stacking */
+      flex: 0 0 auto; /* Don't grow/shrink, use natural size */
+      margin-left: calc(-1 * var(--tip-width)); /* Move left so tip touches previous item's tip */
 
-      /* Dimensions and positioning */
-      width: calc(var(--chevron-width) - var(--chevron-tip-width)); /* From left tip to right edge */
-      margin-right: calc(var(--chevron-gap) - var(--chevron-tip-width)); /* Match chevron gap */
-    }
-
-    /* Last chevron - has both left and right arrows */
-    &:last-child {
+      /* Header shapes (header inside li) */
       > :first-child {
-        /* Keep full chevron shape with both tips */
+        /* Dimensions */
+        width: var(--width);
+        height: var(--height);
+
+        /* Styling */
+        background-color: var(--bg);
+        color: var(--fg);
+
+        /* Layout */
+        display: flex;
+        align-items: center; /* Center text vertically */
+        justify-content: center; /* Center text horizontally */
+        position: relative;
+        z-index: 2; /* Above content boxes for proper overlap */
+
+        /* Create chevron shape with both left and right arrows */
         clip-path: polygon(
           0 0,
-          /* Top left */ calc(100% - var(--chevron-tip-width)) 0,
+          /* Top left */ calc(100% - var(--tip-width)) 0,
           /* Top right before tip */ 100% 50%,
-          /* Right tip point */ calc(100% - var(--chevron-tip-width)) 100%,
+          /* Right tip point */ calc(100% - var(--tip-width)) 100%,
           /* Bottom right before tip */ 0 100%,
-          /* Bottom left */ var(--chevron-tip-width) 50% /* Left tip point */
+          /* Bottom left */ var(--tip-width) 50% /* Left tip point */
         );
-        margin-right: 0; /* No gap needed for last item */
       }
 
-      /* Last rectangle - remove right margin */
-      > ul {
-        margin-right: 0;
+      /* Content boxes (ul inside li) */
+      > ul,
+      > ol,
+      > img,
+      > div {
+        box-sizing: border-box;
+        list-style: revert;
+
+        background-color: var(--bg-alt);
+        color: var(--fg-alt);
+
+        flex: 1; /* Expand to fill remaining height */
+        position: relative;
+        z-index: 1; /* Below headers */
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+
+        /* Dimensions and positioning */
+        width: calc(var(--width) - var(--tip-width));
       }
-    }
 
-    /* First chevron - no left arrow tip */
-    &:first-child {
-      > :first-child {
-        /* Remove left arrow by starting clip-path at left edge */
-        clip-path: polygon(
-          0 0,
-          /* Top left */ calc(100% - var(--chevron-tip-width)) 0,
-          /* Top right before tip */ 100% 50%,
-          /* Right tip point */ calc(100% - var(--chevron-tip-width)) 100%,
-          /* Bottom right before tip */ 0 100% /* Bottom left */
-        );
-
-        /* Adjust padding since there's no left tip */
-        padding-left: 0;
+      /* Last chevron - has both left and right arrows */
+      &:last-child {
+        > :first-child {
+          /* Keep full chevron shape with both tips */
+          clip-path: polygon(
+            0 0,
+            /* Top left */ calc(100% - var(--tip-width)) 0,
+            /* Top right before tip */ 100% 50%,
+            /* Right tip point */ calc(100% - var(--tip-width)) 100%,
+            /* Bottom right before tip */ 0 100%,
+            /* Bottom left */ var(--tip-width) 50% /* Left tip point */
+          );
+        }
       }
 
-      /* First rectangle - starts at left edge, not left tip */
-      > ul {
-        margin-left: 0; /* No left shift needed */
+      /* First chevron - no left arrow tip */
+      &:first-child {
+        margin-left: 0; /* No previous tip to overlap into, so start normally */
+
+        > :first-child {
+          /* Remove left arrow by starting clip-path at left edge */
+          clip-path: polygon(
+            0 0,
+            /* Top left */ calc(100% - var(--tip-width)) 0,
+            /* Top right before tip */ 100% 50%,
+            /* Right tip point */ calc(100% - var(--tip-width)) 100%,
+            /* Bottom right before tip */ 0 100% /* Bottom left */
+          );
+
+          /* Center first heading since there's no left tip */
+          box-sizing: border-box;
+          padding-right: var(--tip-width);
+        }
+
+        /* First rectangle is smaller - no left arrow tip*/
+        > ul,
+        > ol {
+          width: calc(var(--width) - var(--tip-width));
+        }
       }
     }
   }

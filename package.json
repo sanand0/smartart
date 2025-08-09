@@ -16,14 +16,10 @@
   "files": [
     "LICENSE",
     "README.md",
-    "dist/",
-    "column.css",
-    "column.md",
-    "rows.css",
-    "rows.md"
+    "dist/"
   ],
   "scripts": {
-    "build": "npx -y esbuild chevron.css --bundle --minify --outfile=dist/chevron.min.css && npx -y esbuild column.css --bundle --minify --outfile=dist/column.min.css && npx -y esbuild rows.css --bundle --minify --outfile=dist/rows.min.css",
+    "build": "npx -y esbuild chevron.css --bundle --minify --outfile=dist/chevron.min.css && npx -y esbuild column.css --bundle --minify --outfile=dist/column.min.css && npx -y esbuild stack.css --bundle --minify --outfile=dist/stack.min.css && npx -y esbuild themes.css --bundle --minify --outfile=dist/themes.min.css",
     "screenshot": "node screenshot.js",
     "dev": "echo 'Development server would serve index.html here'",
     "lint:oxlint": "npx -y oxlint --fix",

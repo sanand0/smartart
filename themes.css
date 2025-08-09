@@ -1,0 +1,120 @@
+/* SmartArt Themes */
+:root {
+  --fade: 50%;
+}
+
+[class*="sm-theme-"] li:nth-child(1) > :first-child { background-color: var(--bg-1, var(--bg)); color: var(--fg-1, var(--fg)); isolation: isolate; mix-blend-mode: difference; }
+[class*="sm-theme-"] li:nth-child(2) > :first-child { background-color: var(--bg-2, var(--bg)); color: var(--fg-2, var(--fg)); isolation: isolate; mix-blend-mode: difference; }
+[class*="sm-theme-"] li:nth-child(3) > :first-child { background-color: var(--bg-3, var(--bg)); color: var(--fg-3, var(--fg)); isolation: isolate; mix-blend-mode: difference; }
+[class*="sm-theme-"] li:nth-child(4) > :first-child { background-color: var(--bg-4, var(--bg)); color: var(--fg-4, var(--fg)); isolation: isolate; mix-blend-mode: difference; }
+[class*="sm-theme-"] li:nth-child(5) > :first-child { background-color: var(--bg-5, var(--bg)); color: var(--fg-5, var(--fg)); isolation: isolate; mix-blend-mode: difference; }
+[class*="sm-theme-"] li:nth-child(6) > :first-child { background-color: var(--bg-6, var(--bg)); color: var(--fg-6, var(--fg)); isolation: isolate; mix-blend-mode: difference; }
+
+[class*="sm-theme-"] li:nth-child(1) > ul { background-color: var(--bg-alt-1, var(--bg-alt)); color: var(--fg-alt-1, var(--fg-alt)); }
+[class*="sm-theme-"] li:nth-child(2) > ul { background-color: var(--bg-alt-2, var(--bg-alt)); color: var(--fg-alt-2, var(--fg-alt)); }
+[class*="sm-theme-"] li:nth-child(3) > ul { background-color: var(--bg-alt-3, var(--bg-alt)); color: var(--fg-alt-3, var(--fg-alt)); }
+[class*="sm-theme-"] li:nth-child(4) > ul { background-color: var(--bg-alt-4, var(--bg-alt)); color: var(--fg-alt-4, var(--fg-alt)); }
+[class*="sm-theme-"] li:nth-child(5) > ul { background-color: var(--bg-alt-5, var(--bg-alt)); color: var(--fg-alt-5, var(--fg-alt)); }
+[class*="sm-theme-"] li:nth-child(6) > ul { background-color: var(--bg-alt-6, var(--bg-alt)); color: var(--fg-alt-6, var(--fg-alt)); }
+
+/* Office Theme */
+.sm-theme-office {
+  --fg: #fff;
+  --fg-alt: #000;
+  --bg-1: #4472c4; --bg-alt-1: color-mix(in srgb, var(--bg-1) calc(100% - var(--fade)), white);
+  --bg-2: #ed7d31; --bg-alt-2: color-mix(in srgb, var(--bg-2) calc(100% - var(--fade)), white);
+  --bg-3: #a5a5a5; --bg-alt-3: color-mix(in srgb, var(--bg-3) calc(100% - var(--fade)), white);
+  --bg-4: #ffc000; --bg-alt-4: color-mix(in srgb, var(--bg-4) calc(100% - var(--fade)), white);
+  --bg-5: #5b9bd5; --bg-alt-5: color-mix(in srgb, var(--bg-5) calc(100% - var(--fade)), white);
+  --bg-6: #70ad47; --bg-alt-6: color-mix(in srgb, var(--bg-6) calc(100% - var(--fade)), white);
+}
+
+/* Okabe–Ito (colorblind-safe, pro) */
+.sm-theme-okabe-ito {
+  --bg-1:#E69F00; --bg-alt-1:color-mix(in srgb,var(--bg-1) calc(100% - var(--fade)), white);
+  --bg-2:#56B4E9; --bg-alt-2:color-mix(in srgb,var(--bg-2) calc(100% - var(--fade)), white);
+  --bg-3:#009E73; --bg-alt-3:color-mix(in srgb,var(--bg-3) calc(100% - var(--fade)), white);
+  --bg-4:#F0E442; --bg-alt-4:color-mix(in srgb,var(--bg-4) calc(100% - var(--fade)), white);
+  --bg-5:#0072B2; --bg-alt-5:color-mix(in srgb,var(--bg-5) calc(100% - var(--fade)), white);
+  --bg-6:#D55E00; --bg-alt-6:color-mix(in srgb,var(--bg-6) calc(100% - var(--fade)), white);
+}
+
+/* Material (Google-ish, vibrant but balanced) */
+.sm-theme-material {
+  --bg-1:#3F51B5; --bg-alt-1:color-mix(in srgb,var(--bg-1) calc(100% - var(--fade)), white);
+  --bg-2:#E91E63; --bg-alt-2:color-mix(in srgb,var(--bg-2) calc(100% - var(--fade)), white);
+  --bg-3:#009688; --bg-alt-3:color-mix(in srgb,var(--bg-3) calc(100% - var(--fade)), white);
+  --bg-4:#FFC107; --bg-alt-4:color-mix(in srgb,var(--bg-4) calc(100% - var(--fade)), white);
+  --bg-5:#2196F3; --bg-alt-5:color-mix(in srgb,var(--bg-5) calc(100% - var(--fade)), white);
+  --bg-6:#FF5722; --bg-alt-6:color-mix(in srgb,var(--bg-6) calc(100% - var(--fade)), white);
+}
+
+/* Tableau Classic (corporate, legible on slides) */
+.sm-theme-tableau {
+  --bg-1:#1F77B4; --bg-alt-1:color-mix(in srgb,var(--bg-1) calc(100% - var(--fade)), white);
+  --bg-2:#FF7F0E; --bg-alt-2:color-mix(in srgb,var(--bg-2) calc(100% - var(--fade)), white);
+  --bg-3:#2CA02C; --bg-alt-3:color-mix(in srgb,var(--bg-3) calc(100% - var(--fade)), white);
+  --bg-4:#9467BD; --bg-alt-4:color-mix(in srgb,var(--bg-4) calc(100% - var(--fade)), white);
+  --bg-5:#8C564B; --bg-alt-5:color-mix(in srgb,var(--bg-5) calc(100% - var(--fade)), white);
+  --bg-6:#17BECF; --bg-alt-6:color-mix(in srgb,var(--bg-6) calc(100% - var(--fade)), white);
+}
+
+/* Solarized Accents (calm, consistent luminance) */
+.sm-theme-solarized {
+  --bg-1:#268BD2; --bg-alt-1:color-mix(in srgb,var(--bg-1) calc(100% - var(--fade)), white);
+  --bg-2:#2AA198; --bg-alt-2:color-mix(in srgb,var(--bg-2) calc(100% - var(--fade)), white);
+  --bg-3:#859900; --bg-alt-3:color-mix(in srgb,var(--bg-3) calc(100% - var(--fade)), white);
+  --bg-4:#DC322F; --bg-alt-4:color-mix(in srgb,var(--bg-4) calc(100% - var(--fade)), white);
+  --bg-5:#B58900; --bg-alt-5:color-mix(in srgb,var(--bg-5) calc(100% - var(--fade)), white);
+  --bg-6:#D33682; --bg-alt-6:color-mix(in srgb,var(--bg-6) calc(100% - var(--fade)), white);
+}
+
+/* Ocean (cool, modern dashboards) */
+.sm-theme-ocean {
+  --bg-1:#023E8A; --bg-alt-1:color-mix(in srgb,var(--bg-1) calc(100% - var(--fade)), white); --fg-1: white; --fg-alt-1: white;
+  --bg-2:#0077B6; --bg-alt-2:color-mix(in srgb,var(--bg-2) calc(100% - var(--fade)), white); --fg-2: white; --fg-alt-2: white;
+  --bg-3:#0096C7; --bg-alt-3:color-mix(in srgb,var(--bg-3) calc(100% - var(--fade)), white); --fg-3: white; --fg-alt-3: white;
+  --bg-4:#00B4D8; --bg-alt-4:color-mix(in srgb,var(--bg-4) calc(100% - var(--fade)), white);
+  --bg-5:#48CAE4; --bg-alt-5:color-mix(in srgb,var(--bg-5) calc(100% - var(--fade)), white);
+  --bg-6:#90E0EF; --bg-alt-6:color-mix(in srgb,var(--bg-6) calc(100% - var(--fade)), white);
+}
+
+/* Forest/Earth (grounded, exec decks) */
+.sm-theme-forest {
+  --bg-1:#355E3B; --bg-alt-1:color-mix(in srgb,var(--bg-1) calc(100% - var(--fade)), white); --fg-1: white; --fg-alt-1: white;
+  --bg-2:#386641; --bg-alt-2:color-mix(in srgb,var(--bg-2) calc(100% - var(--fade)), white); --fg-2: white; --fg-alt-2: white;
+  --bg-3:#6A994E; --bg-alt-3:color-mix(in srgb,var(--bg-3) calc(100% - var(--fade)), white); --fg-3: white; --fg-alt-3: white;
+  --bg-4:#A7C957; --bg-alt-4:color-mix(in srgb,var(--bg-4) calc(100% - var(--fade)), white);
+  --bg-5:#8D99AE; --bg-alt-5:color-mix(in srgb,var(--bg-5) calc(100% - var(--fade)), white);
+  --bg-6:#BC4749; --bg-alt-6:color-mix(in srgb,var(--bg-6) calc(100% - var(--fade)), white);
+}
+
+/* Pastel (soft, low-ink handouts) */
+.sm-theme-pastel {
+  --bg-1:#A3C4F3; --bg-alt-1:color-mix(in srgb,var(--bg-1) calc(100% - var(--fade)), white);
+  --bg-2:#F7B7A3; --bg-alt-2:color-mix(in srgb,var(--bg-2) calc(100% - var(--fade)), white);
+  --bg-3:#CDEAC0; --bg-alt-3:color-mix(in srgb,var(--bg-3) calc(100% - var(--fade)), white);
+  --bg-4:#FFE3A3; --bg-alt-4:color-mix(in srgb,var(--bg-4) calc(100% - var(--fade)), white);
+  --bg-5:#BFD3C1; --bg-alt-5:color-mix(in srgb,var(--bg-5) calc(100% - var(--fade)), white);
+  --bg-6:#D7BDE2; --bg-alt-6:color-mix(in srgb,var(--bg-6) calc(100% - var(--fade)), white);
+}
+
+/* Monochrome (sleek, focus on structure) */
+.sm-theme-mono {
+  --bg-1:#111827; --bg-alt-1:color-mix(in srgb,var(--bg-1) calc(100% - var(--fade)), white); --fg-1: white; --fg-alt-1: white;
+  --bg-2:#374151; --bg-alt-2:color-mix(in srgb,var(--bg-2) calc(100% - var(--fade)), white); --fg-2: white; --fg-alt-2: white;
+  --bg-3:#6B7280; --bg-alt-3:color-mix(in srgb,var(--bg-3) calc(100% - var(--fade)), white); --fg-3: white; --fg-alt-3: white;
+  --bg-4:#9CA3AF; --bg-alt-4:color-mix(in srgb,var(--bg-4) calc(100% - var(--fade)), white);
+  --bg-5:#D1D5DB; --bg-alt-5:color-mix(in srgb,var(--bg-5) calc(100% - var(--fade)), white);
+  --bg-6:#F3F4F6; --bg-alt-6:color-mix(in srgb,var(--bg-6) calc(100% - var(--fade)), white);
+}
+
+/* High-Contrast Neon (for dark UIs & posters) */
+.sm-theme-neon {
+  --bg-1:#00E5FF; --bg-alt-1:color-mix(in srgb,var(--bg-1) calc(100% - var(--fade)), white);
+  --bg-2:#FF3D00; --bg-alt-2:color-mix(in srgb,var(--bg-2) calc(100% - var(--fade)), white);
+  --bg-3:#00FF6A; --bg-alt-3:color-mix(in srgb,var(--bg-3) calc(100% - var(--fade)), white);
+  --bg-4:#B388FF; --bg-alt-4:color-mix(in srgb,var(--bg-4) calc(100% - var(--fade)), white);
+  --bg-5:#FFEA00; --bg-alt-5:color-mix(in srgb,var(--bg-5) calc(100% - var(--fade)), white);
+  --bg-6:#FF6BD6; --bg-alt-6:color-mix(in srgb,var(--bg-6) calc(100% - var(--fade)), white);
+}

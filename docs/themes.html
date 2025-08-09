@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Themes</title>
+  <link rel="stylesheet" href="../chevron.css" />
+  <link rel="stylesheet" href="../themes.css" />
+  <link rel="stylesheet" href="reset.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@11/build/styles/xcode.min.css">
+  <style>
+    body {
+      background-color: #333;
+      color: #fff;
+    }
+
+    .controls {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 2rem;
+      margin: 0 2rem;
+      align-items: center;
+    }
+
+    .control-group {
+      display: flex;
+      flex-direction: column;
+      gap: 0.5rem;
+    }
+
+    .control-group label {
+      font-size: 1.25rem;
+      font-weight: normal;
+    }
+
+    .control-group select,
+    .control-group input {
+      font-size: 1rem;
+      padding: 0.5rem;
+      border: 2px solid #ddd;
+      border-radius: 4px;
+    }
+
+    .control-group select {
+      min-width: 200px;
+    }
+
+    .control-group input[type="range"] {
+      width: 150px;
+    }
+
+    .slider-container {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+
+    .slider-value {
+      font-family: monospace;
+      font-weight: bold;
+      min-width: 3em;
+      text-align: center;
+    }
+
+    #code {
+      margin: 0 2rem;
+      overflow-x: auto;
+    }
+
+  </style>
+</head>
+
+<body>
+  <div class="controls">
+    <div class="control-group">
+      <label for="theme">Select Theme</label>
+      <select id="theme">
+        <option value="sm-theme-office">Office (corporate, pro)</option>
+        <option value="sm-theme-okabe-ito">Okabe–Ito (colorblind-safe, pro)</option>
+        <option value="sm-theme-material">Material (Google-ish, vibrant but balanced)</option>
+        <option value="sm-theme-tableau">Tableau Classic (corporate, legible on slides)</option>
+        <option value="sm-theme-solarized">Solarized Accents (calm, consistent luminance)</option>
+        <option value="sm-theme-ocean">Ocean (cool, modern dashboards)</option>
+        <option value="sm-theme-forest">Forest/Earth (grounded, exec decks)</option>
+        <option value="sm-theme-pastel">Pastel (soft, low-ink handouts)</option>
+        <option value="sm-theme-mono">Monochrome (sleek, focus on structure)</option>
+        <option value="sm-theme-neon">High-Contrast Neon (for dark UIs & posters)</option>
+      </select>
+    </div>
+
+    <div class="control-group">
+      <label for="fade">Fade Percentage</label>
+      <div class="slider-container">
+        <input type="range" id="fade" min="0" max="100" value="20" step="1">
+        <span class="slider-value" id="fade-value">20%</span>
+      </div>
+    </div>
+  </div>
+
+  <pre><code id="code"></code></pre>
+
+  <div class="sm-chevron sm-theme-office">
+    <ul>
+      <li>
+        <h3>Step 1</h3>
+        <ul>
+          <li>Detail A</li>
+          <li>Detail B</li>
+        </ul>
+      </li>
+      <li>
+        <h3>Step 2</h3>
+        <ul>
+          <li>Detail A</li>
+          <li>Detail B</li>
+        </ul>
+      </li>
+      <li>
+        <h3>Step 3</h3>
+        <ul>
+          <li>Detail A</li>
+          <li>Detail B</li>
+        </ul>
+      </li>
+      <li>
+        <h3>Step 4</h3>
+        <ul>
+          <li>Detail A</li>
+          <li>Detail B</li>
+        </ul>
+      </li>
+      <li>
+        <h3>Step 5</h3>
+        <ul>
+          <li>Detail A</li>
+          <li>Detail B</li>
+        </ul>
+      </li>
+      <li>
+        <h3>Step 6</h3>
+        <ul>
+          <li>Detail A</li>
+          <li>Detail B</li>
+        </ul>
+      </li>
+    </ul>
+  </div>
+
+  <script type="module">
+    import hljs from 'https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.9.0/build/es/highlight.min.js';
+    const $theme = document.querySelector("#theme");
+    const $altMix = document.querySelector("#fade");
+    const $altMixValue = document.querySelector("#fade-value");
+    const $chevron = document.querySelector(".sm-chevron");
+    const $code = document.querySelector("#code");
+
+    function updateTheme() {
+      const theme = $theme.value;
+      const altMix = $altMix.value;
+      // Update chevron class
+      $chevron.className = `sm-chevron ${theme}`;
+      // Update CSS custom properties
+      $chevron.style.setProperty('--fade', `${altMix}%`);
+      // Update slider value display
+      $altMixValue.textContent = `${altMix}%`;
+      // Update code display with syntax highlighting
+      const codeContent = `<div class="sm-chevron ${theme}" style="--fade: ${altMix}%;">
+  <ul>
+    <li>
+      <h3>Step 1</h3>
+      <ul>
+        <li>Detail A</li>
+        <li>Detail B</li>
+      </ul>
+    </li>
+    <!-- ... more steps ... -->
+  </ul>
+</div>`;
+      $code.textContent = codeContent;
+      delete $code.dataset.highlighted;
+      hljs.highlightElement($code);
+    }
+    // Add event listeners
+    $theme.addEventListener("change", updateTheme);
+    $altMix.addEventListener("input", updateTheme);
+    // Initialize
+    updateTheme();
+
+  </script>
+</body>
+
+</html>
