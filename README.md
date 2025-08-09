@@ -33,13 +33,24 @@ A dozen themes for a professional look. **[Read Themes Docs &raquo;](themes.md)*
 
 ## Development
 
+File structure:
+
+- Component CSS are in /: `chevron.css`, `column.css`, `stack.css`, `themes.css`, ...
+- Docs site: `index.html` (Docsify) and `script.js` (ESM renderer tweaks)
+- Docs pages: `chevron.md`, `column.md`, `stack.md`, `themes.md`, ...; images in `docs/`
+- Build output: `dist/` (minified `.min.css` bundles)
+- Tests: `tests/*.spec.ts` and `tests/utils.ts` (Playwright)
+- Tools: `screenshot.js` (generate `.webp` examples), `playwright.config.ts`
+
 ```bash
 git clone https://github.com/sanand0/smartart.git
 cd smartart
 
 npm install
-npm run lint && npm run build
-npm test # just takes screenshots for now
+npm run lint # oxlint, prettier for JS/MD, HTML beautifier
+npm run build # bundle + minify CSS into dist/ via esbuild
+npm test # Playwright tests with local server
+npm run screenshot # capture docs examples to docs/*.webp via Playwright
 
 npm publish
 git commit . -m"$COMMIT_MSG"; git tag $VERSION; git push --follow-tags

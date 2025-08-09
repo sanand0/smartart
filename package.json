@@ -26,12 +26,15 @@
     "lint:js-md": "npx -y prettier@3.5 --print-width 120 --write '**/*.js' '!**/*.min.js' '!dist/**' '**/*.md'",
     "lint:html": "npx -y js-beautify@1 '**/*.html' --type html --replace --indent-size 2 --max-preserve-newlines 1 --end-with-newline",
     "lint": "npm run lint:oxlint && npm run lint:js-md && npm run lint:html",
-    "test": "npm run screenshot",
+    "test": "playwright test",
     "prepublishOnly": "npm run lint && npm run build && npm run screenshot"
   },
   "devDependencies": {
+    "@playwright/test": "^1.54.2",
+    "@types/node": "^24.2.1",
     "playwright": "^1.54.1",
-    "sharp": "^0.34.3"
+    "sharp": "^0.34.3",
+    "sirv-cli": "^3.0.1"
   },
   "keywords": [
     "css",
