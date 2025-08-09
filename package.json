@@ -20,14 +20,14 @@
   ],
   "scripts": {
     "build": "npx -y esbuild chevron.css --bundle --minify --outfile=dist/chevron.min.css && npx -y esbuild column.css --bundle --minify --outfile=dist/column.min.css && npx -y esbuild stack.css --bundle --minify --outfile=dist/stack.min.css && npx -y esbuild themes.css --bundle --minify --outfile=dist/themes.min.css",
-    "screenshot": "node screenshot.js",
+    "screenshot": "playwright test tests/screenshots.spec.ts",
     "dev": "echo 'Development server would serve index.html here'",
     "lint:oxlint": "npx -y oxlint --fix",
     "lint:js-md": "npx -y prettier@3.5 --print-width 120 --write '**/*.js' '!**/*.min.js' '!dist/**' '**/*.md'",
     "lint:html": "npx -y js-beautify@1 '**/*.html' --type html --replace --indent-size 2 --max-preserve-newlines 1 --end-with-newline",
     "lint": "npm run lint:oxlint && npm run lint:js-md && npm run lint:html",
-    "test": "playwright test",
-    "prepublishOnly": "npm run lint && npm run build && npm run screenshot"
+    "test": "playwright test --grep-invert @slow",
+    "prepublishOnly": "npm run lint && npm run build && npm run screenshot && npm run test"
   },
   "devDependencies": {
     "@playwright/test": "^1.54.2",

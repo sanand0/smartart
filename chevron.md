@@ -288,7 +288,7 @@ Add any of the `sm-theme-*` classes available in [themes](themes.md). For exampl
 </div>
 ```
 
-### Ordered List and Direct Content
+### Ordered List
 
 ```markdown :example="chevron-ordered.webp"
 <div class="sm-chevron">
@@ -299,17 +299,6 @@ Add any of the `sm-theme-*` classes available in [themes](themes.md). For exampl
 2. **Two**
    1. Alpha
    2. Beta
-
-</div>
-```
-
-```markdown :example="chevron-direct.webp"
-<div class="sm-chevron">
-
-- **With Div**
-  <div>Custom HTML content</div>
-- **With Image**
-  <img src="https://picsum.photos/120/60" alt="pic" />
 
 </div>
 ```
