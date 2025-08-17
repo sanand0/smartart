@@ -38,7 +38,7 @@ Create a progress tracker with semantic HTML using checkboxes to represent compl
 </div>
 ```
 
-[![Basic Progress Tracker Example](https://raw.githubusercontent.com/sanand0/smartart/main/docs/progresstracker-basic.webp)](docs/progresstracker-basic.html ":include height=200px")
+[![Basic Progress Tracker Example](docs/progresstracker-basic.webp)](docs/progresstracker-basic.html)
 
 [See the Basic example](docs/progresstracker-basic.html ":ignore")
 
@@ -57,7 +57,7 @@ For vertical orientation, add the `vertical` class:
 </div>
 ```
 
-[![Vertical Progress Tracker Example](https://raw.githubusercontent.com/sanand0/smartart/main/docs/progresstracker-vertical.webp)](docs/progresstracker-vertical.html ":include height=300px")
+[![Vertical Progress Tracker Example](docs/progresstracker-vertical.webp)](docs/progresstracker-vertical.html)
 
 [See the Vertical example](docs/progresstracker-vertical.html ":ignore")
 
