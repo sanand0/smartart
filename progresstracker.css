@@ -1,0 +1,252 @@
+/* SmartArt Progress Tracker - Modern Implementation */
+
+/* Main container */
+.sm-progresstracker {
+  /* Customizable variables */
+  --step-size: 50px;         /* Size of the step circles */
+  --line-thickness: 4px;     /* Thickness of the progress line */
+  --line-color: #e9ecef;     /* Color of the base line */
+  --progress-color: #28a745; /* Color of the progress line */
+  --circle-bg: #f8f9fa;      /* Background color of uncompleted circles */
+  --circle-border: #dee2e6;  /* Border color of uncompleted circles */
+  --text-color: #6c757d;     /* Text color for uncompleted steps */
+  --completed-color: #28a745;/* Color for completed steps */
+  --spacing: 40px;           /* Spacing between elements */
+  
+  max-width: 800px;
+  margin: 40px 0;
+  position: relative;
+}
+
+.sm-progresstracker > ul {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+  padding: 0 30px;
+  margin: 0;
+  width: 100%;
+}
+
+/* Base connecting line (gray background) */
+.sm-progresstracker > ul::before {
+  content: '';
+  position: absolute;
+  top: calc(var(--step-size) / 2);
+  left: 25px;
+  right: 25px;
+  height: var(--line-thickness);
+  background: var(--line-color);
+  z-index: 1;
+  border-radius: calc(var(--line-thickness) / 2);
+}
+
+/* Progress line that fills based on completed checkboxes */
+.sm-progresstracker > ul::after {
+  content: '';
+  position: absolute;
+  top: calc(var(--step-size) / 2);
+  left: 25px;
+  height: var(--line-thickness);
+  background: var(--progress-color);
+  z-index: 2;
+  border-radius: calc(var(--line-thickness) / 2);
+  transition: all 0.3s ease;
+  width: 0;
+}
+
+/* Individual step items */
+.sm-progresstracker > ul > li {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  z-index: 3;
+  flex: 1;
+  text-align: center;
+  padding-top: calc(var(--step-size) + 20px);
+  padding-left: 0;
+  padding-right: 0;
+  font-weight: 600;
+  font-size: 14px;
+  color: var(--text-color);
+  width: auto;
+  min-width: 80px;
+}
+
+/* Hide the actual checkbox but keep it accessible */
+.sm-progresstracker > ul > li > input[type="checkbox"] {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+
+/* Create custom checkbox appearance with numbers */
+.sm-progresstracker > ul > li::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: var(--step-size);
+  height: var(--step-size);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 600;
+  font-size: 16px;
+  border: 3px solid var(--circle-border);
+  background: var(--circle-bg);
+  color: var(--text-color);
+  z-index: 3;
+}
+
+/* Step numbers inside circles */
+.sm-progresstracker > ul > li:nth-child(1)::before { content: '1'; }
+.sm-progresstracker > ul > li:nth-child(2)::before { content: '2'; }
+.sm-progresstracker > ul > li:nth-child(3)::before { content: '3'; }
+.sm-progresstracker > ul > li:nth-child(4)::before { content: '4'; }
+.sm-progresstracker > ul > li:nth-child(5)::before { content: '5'; }
+
+/* Completed steps - Green with checkmark */
+.sm-progresstracker > ul > li:has(input[type="checkbox"]:checked)::before {
+  content: '✓' !important;
+  background: var(--completed-color);
+  border-color: var(--completed-color);
+  color: white;
+}
+
+.sm-progresstracker > ul > li:has(input[type="checkbox"]:checked) {
+  color: var(--completed-color);
+}
+
+/* Progress line logic - Calculate width based on completed checkboxes */
+.sm-progresstracker > ul:has(> li:nth-child(1):has(input[type="checkbox"]:checked))::after {
+  width: 25%;
+}
+
+.sm-progresstracker > ul:has(> li:nth-child(2):has(input[type="checkbox"]:checked))::after {
+  width: 50%;
+}
+
+.sm-progresstracker > ul:has(> li:nth-child(3):has(input[type="checkbox"]:checked))::after {
+  width: 75%;
+}
+
+.sm-progresstracker > ul:has(> li:nth-child(4):has(input[type="checkbox"]:checked))::after {
+  width: 100%;
+}
+
+/* Vertical Progress Tracker */
+.sm-progresstracker.vertical {
+  /* Vertical specific variables */
+  --vertical-width: 300px;
+  --vertical-height: 400px;
+
+  > ul {
+    flex-direction: column;
+    align-items: flex-start;
+    max-width: var(--vertical-width);
+    height: var(--vertical-height);
+    justify-content: space-between;
+    padding: 20px 0;
+  }
+}
+
+.sm-progresstracker.vertical > ul::before {
+  top: calc(var(--step-size) / 2);
+  left: calc(var(--step-size) / 2);
+  width: var(--line-thickness);
+  height: calc(100% - var(--step-size));
+  right: auto;
+  background: var(--line-color);
+}
+
+.sm-progresstracker.vertical > ul::after {
+  top: calc(var(--step-size) / 2);
+  left: calc(var(--step-size) / 2);
+  width: var(--line-thickness);
+  height: 0;
+  right: auto;
+  background: var(--progress-color);
+}
+
+.sm-progresstracker.vertical > ul > li {
+  flex-direction: row;
+  align-items: center;
+  width: 100%;
+  margin-bottom: 60px;
+  padding-top: 0;
+  padding-left: calc(var(--step-size) + 20px);
+  text-align: left;
+}
+
+.sm-progresstracker.vertical > ul > li:last-child {
+  margin-bottom: 0;
+}
+
+.sm-progresstracker.vertical > ul > li::before {
+  left: 0;
+  transform: none;
+}
+
+/* Vertical progress line fill logic */
+.sm-progresstracker.vertical > ul:has(> li:nth-child(1):has(input[type="checkbox"]:checked))::after {
+  height: 25%;
+}
+
+.sm-progresstracker.vertical > ul:has(> li:nth-child(2):has(input[type="checkbox"]:checked))::after {
+  height: 50%;
+}
+
+.sm-progresstracker.vertical > ul:has(> li:nth-child(3):has(input[type="checkbox"]:checked))::after {
+  height: 75%;
+}
+
+.sm-progresstracker.vertical > ul:has(> li:nth-child(4):has(input[type="checkbox"]:checked))::after {
+  height: 100%;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .sm-progresstracker:not(.vertical) {
+    /* Mobile specific variables */
+    --step-size: 40px;
+    --mobile-spacing: 15px;
+    
+    > ul {
+      flex-direction: column;
+      align-items: flex-start;
+      gap: var(--mobile-spacing);
+    }
+
+    > ul::before,
+    > ul::after {
+      left: calc(var(--step-size) / 2);
+      top: calc(var(--step-size) / 2);
+      bottom: calc(var(--step-size) / 2);
+      width: var(--line-thickness);
+      height: calc(100% - var(--step-size));
+      right: auto;
+    }
+
+    > ul > li {
+      flex-direction: row;
+      align-items: center;
+      width: 100%;
+      text-align: left;
+      padding-top: 0;
+      padding-left: calc(var(--step-size) + 20px);
+      margin-bottom: var(--mobile-spacing);
+    }
+
+    > ul > li::before {
+      left: 0;
+      transform: none;
+    }
+  }
+}
